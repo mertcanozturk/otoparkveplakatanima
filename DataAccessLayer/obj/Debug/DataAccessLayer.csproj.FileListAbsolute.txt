@@ -1,0 +1,14 @@
+E:\C#Project\Otopark\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\C#Project\Otopark\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\C#Project\Otopark\DataAccessLayer\bin\Debug\EntityLayer.dll
+E:\C#Project\Otopark\DataAccessLayer\bin\Debug\EntityLayer.pdb
+E:\C#Project\Otopark\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+E:\C#Project\Otopark\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+E:\C#Project\Otopark\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+E:\Project\C#Project\Otopark\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\Project\C#Project\Otopark\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\Project\C#Project\Otopark\DataAccessLayer\bin\Debug\EntityLayer.dll
+E:\Project\C#Project\Otopark\DataAccessLayer\bin\Debug\EntityLayer.pdb
+E:\Project\C#Project\Otopark\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+E:\Project\C#Project\Otopark\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+E:\Project\C#Project\Otopark\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
