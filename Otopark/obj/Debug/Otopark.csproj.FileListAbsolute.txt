@@ -240,3 +240,6 @@ E:\Project\C#Project\Otopark\Otopark\obj\Debug\Otopark.Splash.resources
 E:\Project\C#Project\Otopark\Otopark\obj\Debug\Otopark.YeniAboneForm.resources
 E:\Project\C#Project\Otopark\Otopark\obj\Debug\Otopark.csproj.GenerateResource.Cache
 E:\Project\C#Project\Otopark\Otopark\obj\Debug\Otopark.exe.licenses
+C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\bin\Debug\Otopark.exe.config
+C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\obj\Debug\Otopark.exe
+C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\obj\Debug\Otopark.pdb

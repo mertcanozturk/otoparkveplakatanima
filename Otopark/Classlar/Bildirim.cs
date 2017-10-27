@@ -8,6 +8,7 @@ namespace Otopark.Classlar
 {
     public class Bildirim
     {
+        //Mybildirm
         public void Uyari(string mesaj,string baslik)
         {
             MessageBox.Show(mesaj, baslik, MessageBoxButtons.OK, MessageBoxIcon.Warning);
