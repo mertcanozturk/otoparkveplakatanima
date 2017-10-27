@@ -20,7 +20,7 @@ namespace DataAccessLayer
        
         public bool aracOtoparktaMi(string Plaka)
         {
-            string query = "SELECT * FROM ARACLAR WHERE PLAKA=@PLAKA";
+            string query = "SELECT * FROM TBLARACLAR WHERE PLAKA=@PLAKA";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@PLAKA", SqlDbType.VarChar);
             sqlParameters[0].Value = Plaka;
@@ -56,7 +56,19 @@ namespace DataAccessLayer
                 return dt;
             return null;
         }
-        
+        public DataRow AracGetir(string Plaka)
+        {
+            string query = "SELECT * FROM TBLARACLAR WHERE PLAKA=@PLAKA";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@PLAKA", SqlDbType.VarChar);
+            sqlParameters[0].Value = Plaka;
+
+            DataTable dt = baglanti.executeSelectQuery(query, sqlParameters);
+            DataRow row = dt.Rows[0];
+            if (dt.Rows.Count > 0)
+                return row;
+            return null;
+        }
         public DataTable AracListele()
         {
             DataTable dt = baglanti.Listele();

@@ -9,7 +9,6 @@ namespace EntityLayer
     public class Arac
     {
         public string Plaka { get; set; }
-        //public AracTip aracTip { get; set; }
         public string AracTipAdi { get; set; }
         public decimal Fiyat { get; set; }
         public DateTime GirisTarihi { get; set; }
@@ -35,7 +34,6 @@ namespace EntityLayer
             public string Adres { get; set; }
             public string Telefon { get; set; }
             public string Plaka { get; set; }
-            // public AracTip aracTip { get; set; }
             public string AracTipAdi { get; set; }
             public decimal Fiyat { get; set; }
             public DateTime BaslangicTarihi { get; set; }

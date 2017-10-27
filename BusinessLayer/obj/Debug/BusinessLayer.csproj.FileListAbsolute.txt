@@ -16,3 +16,12 @@ E:\Project\C#Project\Otopark\BusinessLayer\bin\Debug\EntityLayer.pdb
 E:\Project\C#Project\Otopark\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 E:\Project\C#Project\Otopark\BusinessLayer\obj\Debug\BusinessLayer.dll
 E:\Project\C#Project\Otopark\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Mert\Documents\otoparkveplakatanima\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Mert\Documents\otoparkveplakatanima\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Mert\Documents\otoparkveplakatanima\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Mert\Documents\otoparkveplakatanima\BusinessLayer\bin\Debug\EntityLayer.dll
+C:\Users\Mert\Documents\otoparkveplakatanima\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mert\Documents\otoparkveplakatanima\BusinessLayer\bin\Debug\EntityLayer.pdb
+C:\Users\Mert\Documents\otoparkveplakatanima\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Mert\Documents\otoparkveplakatanima\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Mert\Documents\otoparkveplakatanima\BusinessLayer\obj\Debug\BusinessLayer.pdb

@@ -76,7 +76,10 @@ namespace Otopark
         private void AnaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!bildirim.Soru("Çıkmak istiyor musunuz?", "Soru"))
+            {
                 e.Cancel = true;
+                Application.Exit();
+            }
         }
     }
 }

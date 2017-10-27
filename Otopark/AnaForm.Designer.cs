@@ -57,6 +57,7 @@
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnAracTipleri = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +81,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnAracGiris);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnAraclar);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnKasaDurumu);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnAracTipleri);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Ana İşlem Grubu";
             // 
@@ -207,9 +209,10 @@
             this.btnCikis,
             this.btnAyarlar,
             this.barButtonItem7,
-            this.btnKasaDurumu});
+            this.btnKasaDurumu,
+            this.btnAracTipleri});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 19;
+            this.ribbonControl1.MaxItemId = 20;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsTouch.TouchUI = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -276,6 +279,14 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnAracTipleri
+            // 
+            this.btnAracTipleri.Caption = "Araç Tipleri";
+            this.btnAracTipleri.Id = 19;
+            this.btnAracTipleri.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
+            this.btnAracTipleri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.btnAracTipleri.Name = "btnAracTipleri";
+            // 
             // AnaForm
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -326,6 +337,7 @@
         private DevExpress.XtraBars.BarButtonItem btnAyarlar;
         private DevExpress.XtraBars.BarButtonItem btnCikis;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem btnAracTipleri;
     }
 }
 

@@ -264,18 +264,19 @@
             this.menuDuzenle,
             this.menuSonlandir});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(142, 48);
             // 
             // menuDuzenle
             // 
             this.menuDuzenle.Name = "menuDuzenle";
-            this.menuDuzenle.Size = new System.Drawing.Size(152, 22);
-            this.menuDuzenle.Text = "Düzenle";
+            this.menuDuzenle.Size = new System.Drawing.Size(141, 22);
+            this.menuDuzenle.Text = "FiyatHesapla";
+            this.menuDuzenle.Click += new System.EventHandler(this.menuDuzenle_Click);
             // 
             // menuSonlandir
             // 
             this.menuSonlandir.Name = "menuSonlandir";
-            this.menuSonlandir.Size = new System.Drawing.Size(152, 22);
+            this.menuSonlandir.Size = new System.Drawing.Size(141, 22);
             this.menuSonlandir.Text = "Sonlandır";
             this.menuSonlandir.Click += new System.EventHandler(this.menuSonlandir_Click);
             // 

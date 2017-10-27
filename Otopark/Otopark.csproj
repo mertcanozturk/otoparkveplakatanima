@@ -145,6 +145,8 @@
     <Compile Include="AraclarForm.Designer.cs">
       <DependentUpon>AraclarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classlar\AracCikis.cs" />
+    <Compile Include="Classlar\AracGiris.cs" />
     <Compile Include="Classlar\Bildirim.cs" />
     <Compile Include="Classlar\Helper.cs" />
     <Compile Include="Classlar\LicencePlateDedector.cs" />
@@ -243,6 +245,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-cam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-cam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

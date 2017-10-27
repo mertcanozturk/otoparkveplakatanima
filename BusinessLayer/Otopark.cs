@@ -10,6 +10,7 @@ namespace BusinessLayer
 {
     public class Otopark
     {
+        
         private DataAccessLayer.dbConnection baglanti;
         public Otopark()
         {
@@ -78,6 +79,21 @@ namespace BusinessLayer
             }
 
             return dt;
+        }
+
+        public DataRow AracGetir(string plaka)
+        {
+            DataRow row;
+            try
+            {
+                row = otopark.AracGetir(plaka);
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+            return row;
         }
 
         public DataTable Listele()

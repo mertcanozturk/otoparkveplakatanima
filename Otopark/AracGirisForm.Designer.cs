@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AracGirisForm));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.comboArac = new DevExpress.XtraEditors.ComboBoxEdit();
             this.captureViewer = new Ozeki.Media.VideoViewerWF();
             this.btnGirisiOnayla = new DevExpress.XtraEditors.SimpleButton();
             this.lblAracAboneDegil = new System.Windows.Forms.Label();
@@ -56,16 +58,15 @@
             this.videoViewerWF3 = new Ozeki.Media.VideoViewerWF();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.videoViewerWF4 = new Ozeki.Media.VideoViewerWF();
-            this.comboArac = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboArac.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlaka.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboArac.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -86,9 +87,18 @@
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Araç Bilgileri";
             // 
+            // comboArac
+            // 
+            this.comboArac.Location = new System.Drawing.Point(69, 236);
+            this.comboArac.Name = "comboArac";
+            this.comboArac.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboArac.Size = new System.Drawing.Size(92, 20);
+            this.comboArac.TabIndex = 14;
+            // 
             // captureViewer
             // 
-            this.captureViewer.BackColor = System.Drawing.Color.Black;
+            this.captureViewer.BackColor = System.Drawing.Color.White;
             this.captureViewer.ContextMenuEnabled = true;
             this.captureViewer.FlipMode = Ozeki.Media.FlipMode.None;
             this.captureViewer.FrameStretch = Ozeki.Media.FrameStretch.Uniform;
@@ -257,7 +267,6 @@
             this.txtPlaka.TabIndex = 1;
             this.txtPlaka.EditValueChanged += new System.EventHandler(this.txtPlaka_EditValueChanged);
             this.txtPlaka.TextChanged += new System.EventHandler(this.txtPlaka_TextChanged);
-            this.txtPlaka.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPlaka_KeyDown);
             // 
             // label1
             // 
@@ -280,9 +289,12 @@
             // 
             // liveViewer
             // 
-            this.liveViewer.BackColor = System.Drawing.Color.Black;
+            this.liveViewer.BackColor = System.Drawing.Color.White;
+            this.liveViewer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("liveViewer.BackgroundImage")));
+            this.liveViewer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.liveViewer.ContextMenuEnabled = true;
             this.liveViewer.FlipMode = Ozeki.Media.FlipMode.None;
+            this.liveViewer.ForeColor = System.Drawing.Color.White;
             this.liveViewer.FrameStretch = Ozeki.Media.FrameStretch.Uniform;
             this.liveViewer.FullScreenEnabled = true;
             this.liveViewer.Location = new System.Drawing.Point(70, 20);
@@ -304,9 +316,12 @@
             // 
             // videoViewerWF2
             // 
-            this.videoViewerWF2.BackColor = System.Drawing.Color.Black;
+            this.videoViewerWF2.BackColor = System.Drawing.Color.White;
+            this.videoViewerWF2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("videoViewerWF2.BackgroundImage")));
+            this.videoViewerWF2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.videoViewerWF2.ContextMenuEnabled = true;
             this.videoViewerWF2.FlipMode = Ozeki.Media.FlipMode.None;
+            this.videoViewerWF2.ForeColor = System.Drawing.Color.White;
             this.videoViewerWF2.FrameStretch = Ozeki.Media.FrameStretch.Uniform;
             this.videoViewerWF2.FullScreenEnabled = true;
             this.videoViewerWF2.Location = new System.Drawing.Point(70, 24);
@@ -328,9 +343,12 @@
             // 
             // videoViewerWF3
             // 
-            this.videoViewerWF3.BackColor = System.Drawing.Color.Black;
+            this.videoViewerWF3.BackColor = System.Drawing.Color.White;
+            this.videoViewerWF3.BackgroundImage = global::Otopark.Properties.Resources.no1;
+            this.videoViewerWF3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.videoViewerWF3.ContextMenuEnabled = true;
             this.videoViewerWF3.FlipMode = Ozeki.Media.FlipMode.None;
+            this.videoViewerWF3.ForeColor = System.Drawing.Color.White;
             this.videoViewerWF3.FrameStretch = Ozeki.Media.FrameStretch.Uniform;
             this.videoViewerWF3.FullScreenEnabled = true;
             this.videoViewerWF3.Location = new System.Drawing.Point(70, 24);
@@ -352,9 +370,12 @@
             // 
             // videoViewerWF4
             // 
-            this.videoViewerWF4.BackColor = System.Drawing.Color.Black;
+            this.videoViewerWF4.BackColor = System.Drawing.Color.White;
+            this.videoViewerWF4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("videoViewerWF4.BackgroundImage")));
+            this.videoViewerWF4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.videoViewerWF4.ContextMenuEnabled = true;
             this.videoViewerWF4.FlipMode = Ozeki.Media.FlipMode.None;
+            this.videoViewerWF4.ForeColor = System.Drawing.Color.White;
             this.videoViewerWF4.FrameStretch = Ozeki.Media.FrameStretch.Uniform;
             this.videoViewerWF4.FullScreenEnabled = true;
             this.videoViewerWF4.Location = new System.Drawing.Point(70, 24);
@@ -363,15 +384,6 @@
             this.videoViewerWF4.Size = new System.Drawing.Size(296, 233);
             this.videoViewerWF4.TabIndex = 11;
             this.videoViewerWF4.Text = "videoViewerWF1";
-            // 
-            // comboArac
-            // 
-            this.comboArac.Location = new System.Drawing.Point(69, 236);
-            this.comboArac.Name = "comboArac";
-            this.comboArac.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboArac.Size = new System.Drawing.Size(92, 20);
-            this.comboArac.TabIndex = 14;
             // 
             // AracGirisForm
             // 
@@ -389,6 +401,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboArac.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlaka.Properties)).EndInit();
@@ -396,7 +409,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboArac.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

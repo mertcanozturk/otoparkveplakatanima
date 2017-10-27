@@ -8,3 +8,8 @@ E:\Project\C#Project\Otopark\EntityLayer\bin\Debug\EntityLayer.pdb
 E:\Project\C#Project\Otopark\EntityLayer\obj\Debug\EntityLayer.csprojResolveAssemblyReference.cache
 E:\Project\C#Project\Otopark\EntityLayer\obj\Debug\EntityLayer.dll
 E:\Project\C#Project\Otopark\EntityLayer\obj\Debug\EntityLayer.pdb
+C:\Users\Mert\Documents\otoparkveplakatanima\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Users\Mert\Documents\otoparkveplakatanima\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\Mert\Documents\otoparkveplakatanima\EntityLayer\obj\Debug\EntityLayer.csprojResolveAssemblyReference.cache
+C:\Users\Mert\Documents\otoparkveplakatanima\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\Mert\Documents\otoparkveplakatanima\EntityLayer\obj\Debug\EntityLayer.pdb

@@ -118,35 +118,41 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="subscriber-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\subscriber-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Userlist-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Userlist-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="substip-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\substip-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Car-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Car-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="good_sells" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\good_sells.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="elite-captain-black-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\elite-captain-black-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="User_Plus-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User_Plus-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="no-cam1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no-cam.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="presentation-chart-reports-sales-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\presentation-chart-reports-sales-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Car-List-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Car-List-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="subscriber-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subscriber-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User_Plus-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User_Plus-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="elite-captain-black-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\elite-captain-black-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="substip-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\substip-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="good_sells" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\good_sells.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="no-cam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no-cam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Safe_Box-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Safe_Box-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Car-Key-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Car-Key-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Car-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Car-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="daily-report-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\daily-report-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,7 +160,10 @@
   <data name="otopark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\otopark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Safe_Box-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Safe_Box-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Car-List-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Car-List-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="no1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

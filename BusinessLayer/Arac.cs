@@ -62,6 +62,7 @@ namespace BusinessLayer
 
         }
 
+       
         public List<EntityLayer.Arac.AracTip> AracTipGetir()
         {
             List<EntityLayer.Arac.AracTip> aracTips = new List<EntityLayer.Arac.AracTip>();

@@ -27,6 +27,7 @@ namespace Otopark
         EntityLayer.Otopark.Arac otoparkAraci = new EntityLayer.Otopark.Arac();
         EntityLayer.Arac.AracTip aracTip = new EntityLayer.Arac.AracTip();
         List<EntityLayer.Arac.AracTip> aracTips = new List<EntityLayer.Arac.AracTip>();
+        Classlar.AracGiris control = new Classlar.AracGiris();
         bool AboneMi = false;
         public static string AssemblyDirectory
         {
@@ -92,10 +93,18 @@ namespace Otopark
         }
         void _capture_OnFrameCaptured(object sender, Ozeki.Media.Snapshot e)
         {
-            var image = e.ToImage();
-            image.Save("test" + _index + ".jpg");
-            string yol = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\test" + _index + ".jpg";
-            processImageFile(yol);
+            try
+            {
+                var image = e.ToImage();
+                image.Save("test" + _index + ".jpg");
+                string yol = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\test" + _index + ".jpg";
+                processImageFile(yol);
+            }
+            catch (Exception)
+            {
+
+            }
+         
 
         }
 
@@ -120,8 +129,6 @@ namespace Otopark
                         lblKalanAbonelik.Text = arac.okuZaman(fark);
                         lblSoyadi.Text = abone.Soyadi;
                         lblTelefon.Text = abone.Telefon;
-
-
                     }
                     else
                     {
@@ -141,7 +148,7 @@ namespace Otopark
         {
             string plaka = txtPlaka.Text;
             Bsotopark = new BusinessLayer.Otopark();
-            if (Bsotopark.aracOtoparktaMi(plaka.Trim()))
+            if (control.AracOtoparktaMi(plaka.Trim()))
                 mesaj.Uyari("Araç zaten otoparkta", "Uyarı");
             else
             {
@@ -183,7 +190,7 @@ namespace Otopark
                 //var i = 1;
                 foreach (var result in results.Plates)
                 {
-                    var rect = boundingRectangle(result.PlatePoints);
+                    var rect = control.boundingRectangle(result.PlatePoints);
                     var img = Image.FromFile(fileName);
                     var cropped = cropImage(img, rect);
                     images.Add(cropped);
@@ -239,16 +246,7 @@ namespace Otopark
 
         }
 
-
-        public System.Drawing.Rectangle boundingRectangle(List<Point> points)
-        {
-            var minX = points.Min(p => p.X);
-            var minY = points.Min(p => p.Y);
-            var maxX = points.Max(p => p.X);
-            var maxY = points.Max(p => p.Y);
-
-            return new System.Drawing.Rectangle(new Point(minX, minY), new Size(maxX - minX, maxY - minY));
-        }
+    
 
         private static Image cropImage(Image img, System.Drawing.Rectangle cropArea)
         {
@@ -256,53 +254,7 @@ namespace Otopark
             return bmpImage.Clone(cropArea, bmpImage.PixelFormat);
         }
 
-        public static Bitmap combineImages(List<Image> images)
-        {
-            Bitmap finalImage = null;
-
-            try
-            {
-                var width = 0;
-                var height = 0;
-
-                foreach (var bmp in images)
-                {
-                    width += bmp.Width;
-                    height = bmp.Height > height ? bmp.Height : height;
-                }
-
-                finalImage = new Bitmap(width, height);
-
-                using (var g = Graphics.FromImage(finalImage))
-                {
-                    g.Clear(Color.Black);
-
-                    var offset = 0;
-                    foreach (Bitmap image in images)
-                    {
-                        g.DrawImage(image,
-                                    new System.Drawing.Rectangle(offset, 0, image.Width, image.Height));
-                        offset += image.Width;
-                    }
-                }
-
-                return finalImage;
-            }
-            catch (Exception ex)
-            {
-                if (finalImage != null)
-                    finalImage.Dispose();
-
-                throw ex;
-            }
-            finally
-            {
-                foreach (var image in images)
-                {
-                    image.Dispose();
-                }
-            }
-        }
+       
 
         private void AracGirisForm_Load(object sender, EventArgs e)
         {
@@ -327,11 +279,6 @@ namespace Otopark
 
         }
 
-        private void txtPlaka_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
         private void txtPlaka_TextChanged(object sender, EventArgs e)
         {
             abone = new EntityLayer.Arac.AboneBilgileri();
@@ -348,15 +295,6 @@ namespace Otopark
             plakaKontrol();
         }
 
-        private void txtFiyat_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboArac_SelectedValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }
