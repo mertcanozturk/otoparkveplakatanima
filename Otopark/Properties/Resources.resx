@@ -124,6 +124,12 @@
   <data name="no-cam1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\no-cam.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="no1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vektorcar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vektorcar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="presentation-chart-reports-sales-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\presentation-chart-reports-sales-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,10 +166,13 @@
   <data name="otopark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\otopark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Car-List-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Car-List-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="no1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\no1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tend-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tend-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

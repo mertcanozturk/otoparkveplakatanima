@@ -123,6 +123,16 @@ namespace Otopark.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon {
+            get {
+                object obj = ResourceManager.GetObject("icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap no_cam {
             get {
                 object obj = ResourceManager.GetObject("no-cam", resourceCulture);
@@ -203,6 +213,16 @@ namespace Otopark.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tend_32 {
+            get {
+                object obj = ResourceManager.GetObject("tend-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap User_Plus_48 {
             get {
                 object obj = ResourceManager.GetObject("User_Plus-48", resourceCulture);
@@ -216,6 +236,16 @@ namespace Otopark.Properties {
         internal static System.Drawing.Bitmap Userlist_48 {
             get {
                 object obj = ResourceManager.GetObject("Userlist-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vektorcar {
+            get {
+                object obj = ResourceManager.GetObject("vektorcar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

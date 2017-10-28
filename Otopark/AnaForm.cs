@@ -19,6 +19,9 @@ namespace Otopark
 
         private void AnaForm_Load(object sender, EventArgs e)
         {
+            GenelForm frm = new GenelForm();
+            frm.MdiParent = this;
+            frm.Show();
             timer1.Interval = 1000;
             timer1.Start();
 

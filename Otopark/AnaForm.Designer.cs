@@ -33,9 +33,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaForm));
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnOtopark = new DevExpress.XtraBars.BarButtonItem();
             this.btnAracGiris = new DevExpress.XtraBars.BarButtonItem();
             this.btnAraclar = new DevExpress.XtraBars.BarButtonItem();
             this.btnKasaDurumu = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAracTipleri = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnYeniAbone = new DevExpress.XtraBars.BarButtonItem();
             this.btnAboneListesi = new DevExpress.XtraBars.BarButtonItem();
@@ -57,7 +59,6 @@
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnAracTipleri = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -78,12 +79,20 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnOtopark);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnAracGiris);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnAraclar);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnKasaDurumu);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnAracTipleri);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Ana İşlem Grubu";
+            // 
+            // btnOtopark
+            // 
+            this.btnOtopark.Caption = "Otopark";
+            this.btnOtopark.Id = 20;
+            this.btnOtopark.ImageOptions.LargeImage = global::Otopark.Properties.Resources.tend_32;
+            this.btnOtopark.Name = "btnOtopark";
             // 
             // btnAracGiris
             // 
@@ -109,6 +118,14 @@
             this.btnKasaDurumu.Id = 18;
             this.btnKasaDurumu.ImageOptions.LargeImage = global::Otopark.Properties.Resources.Safe_Box_32;
             this.btnKasaDurumu.Name = "btnKasaDurumu";
+            // 
+            // btnAracTipleri
+            // 
+            this.btnAracTipleri.Caption = "Araç Tipleri";
+            this.btnAracTipleri.Id = 19;
+            this.btnAracTipleri.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAracTipleri.ImageOptions.Image")));
+            this.btnAracTipleri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAracTipleri.ImageOptions.LargeImage")));
+            this.btnAracTipleri.Name = "btnAracTipleri";
             // 
             // ribbonPageGroup2
             // 
@@ -210,9 +227,10 @@
             this.btnAyarlar,
             this.barButtonItem7,
             this.btnKasaDurumu,
-            this.btnAracTipleri});
+            this.btnAracTipleri,
+            this.btnOtopark});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 20;
+            this.ribbonControl1.MaxItemId = 21;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsTouch.TouchUI = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -279,14 +297,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnAracTipleri
-            // 
-            this.btnAracTipleri.Caption = "Araç Tipleri";
-            this.btnAracTipleri.Id = 19;
-            this.btnAracTipleri.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.btnAracTipleri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
-            this.btnAracTipleri.Name = "btnAracTipleri";
-            // 
             // AnaForm
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -294,6 +304,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 503);
             this.Controls.Add(this.ribbonControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "AnaForm";
             this.Ribbon = this.ribbonControl1;
@@ -338,6 +349,7 @@
         private DevExpress.XtraBars.BarButtonItem btnCikis;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem btnAracTipleri;
+        private DevExpress.XtraBars.BarButtonItem btnOtopark;
     }
 }
 

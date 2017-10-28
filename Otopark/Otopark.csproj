@@ -64,7 +64,9 @@
       <HintPath>C:\Users\Mert\Desktop\Release\AForge.Video.Kinect.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Dashboard.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v17.1.Core" />
     <Reference Include="DevExpress.Utils.v17.1" />
     <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -74,6 +76,7 @@
     <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Emgu.CV.DebuggerVisualizers.VS2012">
       <HintPath>C:\Emgu\emgucv-windesktop 3.2.0.2682\bin\Emgu.CV.DebuggerVisualizers.VS2012.dll</HintPath>
     </Reference>
@@ -151,6 +154,12 @@
     <Compile Include="Classlar\Helper.cs" />
     <Compile Include="Classlar\LicencePlateDedector.cs" />
     <Compile Include="Classlar\Program.cs" />
+    <Compile Include="GenelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenelForm.Designer.cs">
+      <DependentUpon>GenelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KullaniciGirisForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AraclarForm.resx">
       <DependentUpon>AraclarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenelForm.resx">
+      <DependentUpon>GenelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullaniciGirisForm.resx">
       <DependentUpon>KullaniciGirisForm.cs</DependentUpon>
@@ -254,6 +266,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\no1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vektorcar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tend-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
