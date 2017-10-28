@@ -134,6 +134,7 @@
             this.Name = "KullaniciGirisForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Otopark Kullanıcı Girişi";
+            this.Load += new System.EventHandler(this.KullaniciGirisForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParola.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();

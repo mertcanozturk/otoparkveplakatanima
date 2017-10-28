@@ -32,5 +32,10 @@ namespace Otopark
             }
             else lblHata.Visible = true;
         }
+
+        private void KullaniciGirisForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
