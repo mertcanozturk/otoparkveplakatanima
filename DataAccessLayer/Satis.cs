@@ -6,10 +6,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EntityLayer;
 
 namespace DataAccessLayer
 {
-    public class Satis
+    public class Satis:ISatis
     {
         private dbConnection baglanti;
 
@@ -18,6 +19,10 @@ namespace DataAccessLayer
             baglanti = new dbConnection();
         }
 
+        public bool Guncelle(EntityLayer.Satis satis)
+        {
+            throw new NotImplementedException();
+        }
         public bool Kaydet(EntityLayer.Satis satis)
         {
             string query = "INSERT INTO TBLSATISLAR (ARACTIPNO,PLAKA,ABONENO,GIRISTARIHI,CIKISTARIHI,KONTAK,UCRET,KULLANICIID) VALUES (@ARACTIPNO,@PLAKA,@ABONENO,@GIRISTARIHI,@CIKISTARIHI,@KONTAK,@UCRET,@KULLANICIID)";
@@ -40,6 +45,15 @@ namespace DataAccessLayer
             sqlParameters[7].Value = satis.KullaniciId;
             return baglanti.executeInsertQuery(query, sqlParameters);
 
+        }
+        public DataTable Listele(string a, string b, string c, string d, DateTime f, DateTime e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Sil(int Id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

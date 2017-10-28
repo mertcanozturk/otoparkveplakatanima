@@ -15,7 +15,6 @@ namespace BusinessLayer
         {
             _arac = new DataAccessLayer.Arac();
         }
-
         public bool AboneMi(string plaka)
         {
             try
@@ -61,8 +60,6 @@ namespace BusinessLayer
             return abone;
 
         }
-
-       
         public List<EntityLayer.Arac.AracTip> AracTipGetir()
         {
             List<EntityLayer.Arac.AracTip> aracTips = new List<EntityLayer.Arac.AracTip>();

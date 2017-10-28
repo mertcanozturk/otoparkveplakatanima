@@ -116,19 +116,34 @@ namespace Otopark
                 plaka = plaka.Trim();
                 if (plaka.Length == 7 || plaka.Length == 8)
                 {
+                    lblAracAboneDegil.Visible = true; ;
+                    lblAracAboneDegil.Text = "ARAÇ ABONE DEĞİL.";
                     string plaka1 = txtPlaka.Text;
                     AboneMi = BsArac.AboneMi(plaka1.Trim());
                     if (AboneMi)
                     {
+
                         lblAracAboneDegil.Visible = false;
                         abone = BsArac.AboneGetir(plaka);
                         lblAdi.Text = abone.Adi;
                         lblAboneTipi.Text = abone.AbonelikAdi;
                         comboArac.Text = abone.AracTipAdi;
                         TimeSpan fark = abone.BitisTarihi - DateTime.Now;
-                        lblKalanAbonelik.Text = arac.okuZaman(fark);
+                        if (fark.Minutes < 1)
+                        {
+                            lblAracAboneDegil.Visible = true;
+                            lblAracAboneDegil.Text = "ABONELİĞİ BİTTİ.";
+                            lblKalanAbonelik.Text = "0 gün 0 saat 0 dakika";
+                            AboneMi = false;
+                        }
+                        else
+                        {
+                            lblKalanAbonelik.Text = arac.okuZaman(fark);
+
+                        }
                         lblSoyadi.Text = abone.Soyadi;
                         lblTelefon.Text = abone.Telefon;
+
                     }
                     else
                     {
@@ -162,7 +177,7 @@ namespace Otopark
                 otoparkAraci.Kontak = checkBox1.Checked;
                 otoparkAraci.Plaka = plaka.Trim();
                 otoparkAraci.AboneNo = AboneMi?abone.Id:0;
-                otoparkAraci.AboneMi = otoparkAraci.AboneNo>0?true:false;
+                otoparkAraci.AboneMi = AboneMi;
                 if (Bsotopark.aracKaydet(otoparkAraci))
                     mesaj.Bilgi("Araç otoparka başarıyla giriş yaptı.", "Bilgi");
                 else
@@ -204,24 +219,41 @@ namespace Otopark
 
                 try
                 {
+             
+                    
                     string plaka = plakalar[0];
                     plaka = plaka.Trim();
                     if (plaka.Length == 7 || plaka.Length == 8)
                     {
-
+                        AboneMi = false;
                         txtPlaka.Text = plakalar[0];
+                        lblAracAboneDegil.Visible = true; ;
+                        lblAracAboneDegil.Text = "ARAÇ ABONE DEĞİL.";
 
                         string plaka1 = txtPlaka.Text;
                         AboneMi = BsArac.AboneMi(plaka1.Trim());
                         if (AboneMi)
                         {
+
                             lblAracAboneDegil.Visible = false;
                             abone = BsArac.AboneGetir(plaka);
                             lblAdi.Text = abone.Adi;
                             lblAboneTipi.Text = abone.AbonelikAdi;
                             comboArac.Text = abone.AracTipAdi;
                             TimeSpan fark = abone.BitisTarihi - DateTime.Now;
-                            lblKalanAbonelik.Text = arac.okuZaman(fark);
+                            if (fark.Minutes<1)
+                            {
+                                lblAracAboneDegil.Visible = true;
+                                lblAracAboneDegil.Text = "ARAÇ ABONELİK SÜRESİ SONA ERDİ.";
+                                lblKalanAbonelik.Text = "0 gün 0 saat 0 dakika";
+                                AboneMi = false;
+                            }
+                            else
+                            {
+                                AboneMi = true;
+                                lblKalanAbonelik.Text = arac.okuZaman(fark);
+
+                            }
                             lblSoyadi.Text = abone.Soyadi;
                             lblTelefon.Text = abone.Telefon;
 

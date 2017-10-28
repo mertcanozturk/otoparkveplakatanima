@@ -42,7 +42,7 @@ namespace DataAccessLayer
         }
         public bool AracEkle(EntityLayer.Arac.AboneBilgileri abone,EntityLayer.Arac.AboneTip aboneTip,EntityLayer.Arac.AracTip aracTip,EntityLayer.Arac arac)
         {
-            string query = "INSERT INTO TBLARACLAR (PLAKA,ARACTIPNO,ABONENO,GIRISTARIHI,KONTAK) VALUES (@PLAKA,@ARACTIPNO,@ABONENO,@GIRISTARIHI,@KONTAK";
+            string query = "INSERT INTO TBLARACLAR (PLAKA,ARACTIPNO,ABONENO,GIRISTARIHI,KONTAK) VALUES (@PLAKA,@ARACTIPNO,@ABONENO,@GIRISTARIHI,@KONTAK)";
             SqlParameter[] parameter = new SqlParameter[5];
             parameter[0] = new SqlParameter("@PLAKA", SqlDbType.VarChar);
             parameter[0].Value = 

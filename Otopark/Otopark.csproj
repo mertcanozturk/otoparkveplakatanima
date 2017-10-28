@@ -124,6 +124,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbonelikTipleriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbonelikTipleriForm.Designer.cs">
+      <DependentUpon>AbonelikTipleriForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AboneListesiForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     <Compile Include="YeniAboneForm.Designer.cs">
       <DependentUpon>YeniAboneForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AbonelikTipleriForm.resx">
+      <DependentUpon>AbonelikTipleriForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboneListesiForm.resx">
       <DependentUpon>AboneListesiForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +225,8 @@
       <DependentUpon>YeniAboneForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="EntityLayer.Abone.datasource" />
+    <None Include="EntityLayer.AboneTip.datasource" />
     <None Include="EntityLayer.Otopark+Arac.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

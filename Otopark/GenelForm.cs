@@ -25,14 +25,36 @@ namespace Otopark
         {
             aracList = new List<EntityLayer.Otopark.Arac>();
             arac = new EntityLayer.Otopark.Arac();
-            aracList = Bsotopark.belliSayidaAracListele(20);
+            aracList = Bsotopark.belliSayidaAracListele(14);
             var source = new BindingSource();
             source.DataSource = aracList;
             gridControl1.DataSource = source;
+            lblAnlikKamyonSayisi.Text = Bsotopark.anlikKamyonSayisi().ToString();
+            lblAnlikMinibusSayisi.Text = Bsotopark.anlikMinibusSayisi().ToString();
+            lblAnlikOtobüsSayisi.Text = Bsotopark.anlikOtobusSayisi().ToString();
+            lblAnlikOtomobilSayisi.Text = Bsotopark.anlikOtomobilSayisi().ToString();
+            lblAnlikTirSayisi.Text = Bsotopark.anlikTirSayisi().ToString();
         }
         private void GenelForm_Load(object sender, EventArgs e)
         {
             Listele();
+
+        }
+
+        private void btnPlakaArama_Click(object sender, EventArgs e)
+        {
+            AraclarForm frm = new AraclarForm(txtAracPlaka.Text);
+            frm.MdiParent = AnaForm.ActiveForm;
+            frm.Show();
+        }
+
+        private void btnAboneArama_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAracSayiDetay_Click(object sender, EventArgs e)
+        {
 
         }
     }

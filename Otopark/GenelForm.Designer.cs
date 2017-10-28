@@ -65,12 +65,12 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAbonePlaka = new DevExpress.XtraEditors.TextEdit();
+            this.txtAboneAdi = new DevExpress.XtraEditors.TextEdit();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.btnPlakaArama = new DevExpress.XtraEditors.SimpleButton();
             this.label24 = new System.Windows.Forms.Label();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAracPlaka = new DevExpress.XtraEditors.TextEdit();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
@@ -94,11 +94,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAbonePlaka.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAboneAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAracPlaka.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -129,7 +129,7 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(250, 249);
             this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "     Araç Sayıları";
+            this.groupControl1.Text = "   Güncel Araç Sayıları";
             // 
             // btnAracSayiDetay
             // 
@@ -141,6 +141,7 @@
             this.btnAracSayiDetay.Size = new System.Drawing.Size(196, 42);
             this.btnAracSayiDetay.TabIndex = 2;
             this.btnAracSayiDetay.Text = "Detayları Göster";
+            this.btnAracSayiDetay.Click += new System.EventHandler(this.btnAracSayiDetay_Click);
             // 
             // lblAnlikTirSayisi
             // 
@@ -283,7 +284,7 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(250, 249);
             this.groupControl2.TabIndex = 0;
-            this.groupControl2.Text = "   Bugünün Verileri";
+            this.groupControl2.Text = "   Çıkan Araç Sayıları";
             // 
             // btnBugununVerileriDetay
             // 
@@ -431,8 +432,8 @@
             this.groupControl5.Controls.Add(this.label33);
             this.groupControl5.Controls.Add(this.label42);
             this.groupControl5.Controls.Add(this.textEdit3);
-            this.groupControl5.Controls.Add(this.textEdit2);
-            this.groupControl5.Controls.Add(this.textEdit1);
+            this.groupControl5.Controls.Add(this.txtAbonePlaka);
+            this.groupControl5.Controls.Add(this.txtAboneAdi);
             this.groupControl5.Location = new System.Drawing.Point(19, 226);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(250, 316);
@@ -449,6 +450,7 @@
             this.btnAboneArama.Size = new System.Drawing.Size(196, 42);
             this.btnAboneArama.TabIndex = 2;
             this.btnAboneArama.Text = "Arama Yap";
+            this.btnAboneArama.Click += new System.EventHandler(this.btnAboneArama_Click);
             // 
             // label23
             // 
@@ -489,23 +491,23 @@
             this.textEdit3.Size = new System.Drawing.Size(196, 30);
             this.textEdit3.TabIndex = 3;
             // 
-            // textEdit2
+            // txtAbonePlaka
             // 
-            this.textEdit2.Location = new System.Drawing.Point(28, 157);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(196, 30);
-            this.textEdit2.TabIndex = 3;
+            this.txtAbonePlaka.Location = new System.Drawing.Point(28, 157);
+            this.txtAbonePlaka.Name = "txtAbonePlaka";
+            this.txtAbonePlaka.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAbonePlaka.Properties.Appearance.Options.UseFont = true;
+            this.txtAbonePlaka.Size = new System.Drawing.Size(196, 30);
+            this.txtAbonePlaka.TabIndex = 3;
             // 
-            // textEdit1
+            // txtAboneAdi
             // 
-            this.textEdit1.Location = new System.Drawing.Point(28, 86);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(196, 30);
-            this.textEdit1.TabIndex = 3;
+            this.txtAboneAdi.Location = new System.Drawing.Point(28, 86);
+            this.txtAboneAdi.Name = "txtAboneAdi";
+            this.txtAboneAdi.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAboneAdi.Properties.Appearance.Options.UseFont = true;
+            this.txtAboneAdi.Size = new System.Drawing.Size(196, 30);
+            this.txtAboneAdi.TabIndex = 3;
             // 
             // groupControl4
             // 
@@ -516,7 +518,7 @@
             this.groupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl4.CaptionImageOptions.Image")));
             this.groupControl4.Controls.Add(this.btnPlakaArama);
             this.groupControl4.Controls.Add(this.label24);
-            this.groupControl4.Controls.Add(this.textEdit4);
+            this.groupControl4.Controls.Add(this.txtAracPlaka);
             this.groupControl4.Location = new System.Drawing.Point(19, 12);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(250, 196);
@@ -533,6 +535,7 @@
             this.btnPlakaArama.Size = new System.Drawing.Size(196, 42);
             this.btnPlakaArama.TabIndex = 6;
             this.btnPlakaArama.Text = "Arama Yap";
+            this.btnPlakaArama.Click += new System.EventHandler(this.btnPlakaArama_Click);
             // 
             // label24
             // 
@@ -544,14 +547,14 @@
             this.label24.TabIndex = 5;
             this.label24.Text = "Plaka";
             // 
-            // textEdit4
+            // txtAracPlaka
             // 
-            this.textEdit4.Location = new System.Drawing.Point(28, 86);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(196, 30);
-            this.textEdit4.TabIndex = 8;
+            this.txtAracPlaka.Location = new System.Drawing.Point(28, 86);
+            this.txtAracPlaka.Name = "txtAracPlaka";
+            this.txtAracPlaka.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAracPlaka.Properties.Appearance.Options.UseFont = true;
+            this.txtAracPlaka.Size = new System.Drawing.Size(196, 30);
+            this.txtAracPlaka.TabIndex = 8;
             // 
             // panel4
             // 
@@ -606,6 +609,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowHeight = 30;
             // 
             // colId
             // 
@@ -720,12 +724,12 @@
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAbonePlaka.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAboneAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAracPlaka.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
@@ -770,7 +774,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl5;
         private DevExpress.XtraEditors.SimpleButton btnAboneArama;
         private System.Windows.Forms.Label label42;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtAboneAdi;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private System.Windows.Forms.Panel panel4;
@@ -786,10 +790,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn GIRISTARIHI;
         private DevExpress.XtraGrid.Columns.GridColumn KONTAK;
         private System.Windows.Forms.Label label33;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtAbonePlaka;
         private DevExpress.XtraEditors.SimpleButton btnPlakaArama;
         private System.Windows.Forms.Label label24;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit txtAracPlaka;
         private System.Windows.Forms.Label label23;
         private DevExpress.XtraEditors.TextEdit textEdit3;
     }

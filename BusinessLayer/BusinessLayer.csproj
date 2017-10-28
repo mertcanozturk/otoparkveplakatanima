@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abone.cs" />
     <Compile Include="Arac.cs" />
     <Compile Include="Kullanici.cs" />
     <Compile Include="Otopark.cs" />

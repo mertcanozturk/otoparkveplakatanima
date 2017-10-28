@@ -96,7 +96,6 @@ namespace BusinessLayer
                     arac.AboneMi = Convert.ToBoolean(dr["ABONEMI"]);
                     arac.AracTipAdi = dr["ARACTIPADI"].ToString();
                     aracList.Add(arac);
-
                 }
             }
             catch (Exception)
@@ -104,6 +103,28 @@ namespace BusinessLayer
 
             }
             return aracList;
+        }
+
+        public int anlikOtomobilSayisi()
+        {
+            return otopark.OtomobilSayisi();
+        }
+        public int anlikTirSayisi()
+        {
+            return otopark.TirSayisi();
+        }
+        public int anlikOtobusSayisi()
+        {
+            return otopark.OtobusSayisi();
+
+        }
+        public int anlikMinibusSayisi()
+        {
+            return otopark.MinibusSayisi();
+        }
+        public int anlikKamyonSayisi()
+        {
+            return otopark.KamyonSayisi();
         }
 
         public DataRow AracGetir(string plaka)

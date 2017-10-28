@@ -26,6 +26,12 @@ namespace Otopark
             InitializeComponent();
         }
 
+        public AraclarForm(string plaka)
+        {
+            InitializeComponent();
+            txtPlaka.Text = plaka;
+            Listele();
+        }
         private void AraclarForm_Load(object sender, EventArgs e)
         {
             aracTips = BsArac.AracTipGetir();

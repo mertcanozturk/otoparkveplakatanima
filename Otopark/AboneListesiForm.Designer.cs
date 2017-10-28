@@ -28,10 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboneListesiForm));
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.aboneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAdi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSoyadi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAdres = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTelefon = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPlaka = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAracTipAdi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAracTipId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGirisTarihi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBitisTarihi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAbonelikTipiNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAbonelikAdi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFiyat = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colKullaniciId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.btnAramaYap = new DevExpress.XtraEditors.SimpleButton();
@@ -51,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aboneBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -69,26 +86,205 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(232, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(723, 489);
+            this.groupControl2.Size = new System.Drawing.Size(977, 489);
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "Aboneler";
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.aboneBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(2, 20);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(719, 467);
+            this.gridControl1.Size = new System.Drawing.Size(973, 467);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // aboneBindingSource
+            // 
+            this.aboneBindingSource.DataSource = typeof(EntityLayer.Abone);
+            // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colAdi,
+            this.colSoyadi,
+            this.colAdres,
+            this.colTelefon,
+            this.colPlaka,
+            this.colAracTipAdi,
+            this.colAracTipId,
+            this.colGirisTarihi,
+            this.colBitisTarihi,
+            this.colAbonelikTipiNo,
+            this.colAbonelikAdi,
+            this.colFiyat,
+            this.colKullaniciId});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowHeight = 30;
+            // 
+            // colId
+            // 
+            this.colId.AppearanceCell.Options.UseTextOptions = true;
+            this.colId.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
+            // colAdi
+            // 
+            this.colAdi.AppearanceCell.Options.UseTextOptions = true;
+            this.colAdi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAdi.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAdi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAdi.FieldName = "Adi";
+            this.colAdi.Name = "colAdi";
+            this.colAdi.Visible = true;
+            this.colAdi.VisibleIndex = 0;
+            this.colAdi.Width = 64;
+            // 
+            // colSoyadi
+            // 
+            this.colSoyadi.AppearanceCell.Options.UseTextOptions = true;
+            this.colSoyadi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSoyadi.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSoyadi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSoyadi.FieldName = "Soyadi";
+            this.colSoyadi.Name = "colSoyadi";
+            this.colSoyadi.Visible = true;
+            this.colSoyadi.VisibleIndex = 1;
+            this.colSoyadi.Width = 77;
+            // 
+            // colAdres
+            // 
+            this.colAdres.AppearanceCell.Options.UseTextOptions = true;
+            this.colAdres.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAdres.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAdres.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAdres.FieldName = "Adres";
+            this.colAdres.Name = "colAdres";
+            this.colAdres.Visible = true;
+            this.colAdres.VisibleIndex = 2;
+            this.colAdres.Width = 303;
+            // 
+            // colTelefon
+            // 
+            this.colTelefon.AppearanceCell.Options.UseTextOptions = true;
+            this.colTelefon.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTelefon.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTelefon.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTelefon.FieldName = "Telefon";
+            this.colTelefon.Name = "colTelefon";
+            this.colTelefon.Visible = true;
+            this.colTelefon.VisibleIndex = 3;
+            this.colTelefon.Width = 70;
+            // 
+            // colPlaka
+            // 
+            this.colPlaka.AppearanceCell.Options.UseTextOptions = true;
+            this.colPlaka.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPlaka.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPlaka.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPlaka.FieldName = "Plaka";
+            this.colPlaka.Name = "colPlaka";
+            this.colPlaka.Visible = true;
+            this.colPlaka.VisibleIndex = 4;
+            // 
+            // colAracTipAdi
+            // 
+            this.colAracTipAdi.AppearanceCell.Options.UseTextOptions = true;
+            this.colAracTipAdi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAracTipAdi.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAracTipAdi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAracTipAdi.FieldName = "AracTipAdi";
+            this.colAracTipAdi.Name = "colAracTipAdi";
+            this.colAracTipAdi.Visible = true;
+            this.colAracTipAdi.VisibleIndex = 5;
+            this.colAracTipAdi.Width = 82;
+            // 
+            // colAracTipId
+            // 
+            this.colAracTipId.AppearanceCell.Options.UseTextOptions = true;
+            this.colAracTipId.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAracTipId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAracTipId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAracTipId.FieldName = "AracTipId";
+            this.colAracTipId.Name = "colAracTipId";
+            this.colAracTipId.Width = 110;
+            // 
+            // colGirisTarihi
+            // 
+            this.colGirisTarihi.AppearanceCell.Options.UseTextOptions = true;
+            this.colGirisTarihi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colGirisTarihi.AppearanceHeader.Options.UseTextOptions = true;
+            this.colGirisTarihi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colGirisTarihi.FieldName = "GirisTarihi";
+            this.colGirisTarihi.Name = "colGirisTarihi";
+            this.colGirisTarihi.Visible = true;
+            this.colGirisTarihi.VisibleIndex = 6;
+            this.colGirisTarihi.Width = 98;
+            // 
+            // colBitisTarihi
+            // 
+            this.colBitisTarihi.AppearanceCell.Options.UseTextOptions = true;
+            this.colBitisTarihi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colBitisTarihi.AppearanceHeader.Options.UseTextOptions = true;
+            this.colBitisTarihi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colBitisTarihi.FieldName = "BitisTarihi";
+            this.colBitisTarihi.Name = "colBitisTarihi";
+            this.colBitisTarihi.Visible = true;
+            this.colBitisTarihi.VisibleIndex = 7;
+            this.colBitisTarihi.Width = 77;
+            // 
+            // colAbonelikTipiNo
+            // 
+            this.colAbonelikTipiNo.AppearanceCell.Options.UseTextOptions = true;
+            this.colAbonelikTipiNo.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAbonelikTipiNo.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAbonelikTipiNo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAbonelikTipiNo.FieldName = "AbonelikTipiNo";
+            this.colAbonelikTipiNo.Name = "colAbonelikTipiNo";
+            this.colAbonelikTipiNo.Width = 87;
+            // 
+            // colAbonelikAdi
+            // 
+            this.colAbonelikAdi.AppearanceCell.Options.UseTextOptions = true;
+            this.colAbonelikAdi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAbonelikAdi.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAbonelikAdi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAbonelikAdi.FieldName = "AbonelikAdi";
+            this.colAbonelikAdi.Name = "colAbonelikAdi";
+            this.colAbonelikAdi.Visible = true;
+            this.colAbonelikAdi.VisibleIndex = 8;
+            this.colAbonelikAdi.Width = 73;
+            // 
+            // colFiyat
+            // 
+            this.colFiyat.AppearanceCell.Options.UseTextOptions = true;
+            this.colFiyat.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colFiyat.AppearanceHeader.Options.UseTextOptions = true;
+            this.colFiyat.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colFiyat.FieldName = "Fiyat";
+            this.colFiyat.Name = "colFiyat";
+            this.colFiyat.Visible = true;
+            this.colFiyat.VisibleIndex = 9;
+            this.colFiyat.Width = 38;
+            // 
+            // colKullaniciId
+            // 
+            this.colKullaniciId.AppearanceCell.Options.UseTextOptions = true;
+            this.colKullaniciId.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colKullaniciId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colKullaniciId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colKullaniciId.FieldName = "KullaniciId";
+            this.colKullaniciId.Name = "colKullaniciId";
+            this.colKullaniciId.Width = 57;
             // 
             // groupControl1
             // 
@@ -120,6 +316,7 @@
             this.btnAramaYap.Size = new System.Drawing.Size(103, 33);
             this.btnAramaYap.TabIndex = 13;
             this.btnAramaYap.Text = "Arama Yap";
+            this.btnAramaYap.Click += new System.EventHandler(this.btnAramaYap_Click);
             // 
             // groupBox2
             // 
@@ -250,14 +447,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(955, 489);
+            this.ClientSize = new System.Drawing.Size(1209, 489);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Name = "AboneListesiForm";
             this.Text = "AboneListesiForm";
+            this.Load += new System.EventHandler(this.AboneListesiForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aboneBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -295,5 +494,20 @@
         private DevExpress.XtraEditors.TextEdit txtTelefon;
         private DevExpress.XtraEditors.TextEdit txtPlaka;
         private DevExpress.XtraEditors.ComboBoxEdit comboAracTipi;
+        private System.Windows.Forms.BindingSource aboneBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colAdi;
+        private DevExpress.XtraGrid.Columns.GridColumn colSoyadi;
+        private DevExpress.XtraGrid.Columns.GridColumn colAdres;
+        private DevExpress.XtraGrid.Columns.GridColumn colTelefon;
+        private DevExpress.XtraGrid.Columns.GridColumn colPlaka;
+        private DevExpress.XtraGrid.Columns.GridColumn colAracTipAdi;
+        private DevExpress.XtraGrid.Columns.GridColumn colAracTipId;
+        private DevExpress.XtraGrid.Columns.GridColumn colGirisTarihi;
+        private DevExpress.XtraGrid.Columns.GridColumn colBitisTarihi;
+        private DevExpress.XtraGrid.Columns.GridColumn colAbonelikTipiNo;
+        private DevExpress.XtraGrid.Columns.GridColumn colAbonelikAdi;
+        private DevExpress.XtraGrid.Columns.GridColumn colFiyat;
+        private DevExpress.XtraGrid.Columns.GridColumn colKullaniciId;
     }
 }

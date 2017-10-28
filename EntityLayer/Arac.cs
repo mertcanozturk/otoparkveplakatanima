@@ -55,6 +55,8 @@ namespace EntityLayer
 
         public string okuZaman(TimeSpan span)
         {
+            
+
             string formatted = string.Format("{0}{1}{2}",
         span.Duration().Days > 0 ? string.Format("{0:0} Gün{1}, ", span.Days, span.Days == 1 ? String.Empty : "") : string.Empty,
         span.Duration().Hours > 0 ? string.Format("{0:0} Saat{1}, ", span.Hours, span.Hours == 1 ? String.Empty : "") : string.Empty,

@@ -39,8 +39,8 @@
             this.btnAracTipleri = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnKasaDurumu = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnParaGirisi = new DevExpress.XtraBars.BarButtonItem();
+            this.btnParaCikisi = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnYeniAbone = new DevExpress.XtraBars.BarButtonItem();
             this.btnAboneListesi = new DevExpress.XtraBars.BarButtonItem();
@@ -126,8 +126,8 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.btnKasaDurumu);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem6);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnParaGirisi);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnParaCikisi);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Kasa İşlemleri";
             // 
@@ -138,19 +138,19 @@
             this.btnKasaDurumu.ImageOptions.LargeImage = global::Otopark.Properties.Resources.Safe_Box_32;
             this.btnKasaDurumu.Name = "btnKasaDurumu";
             // 
-            // barButtonItem5
+            // btnParaGirisi
             // 
-            this.barButtonItem5.Caption = "Para Girişi";
-            this.barButtonItem5.Id = 21;
-            this.barButtonItem5.ImageOptions.LargeImage = global::Otopark.Properties.Resources.para_ekle;
-            this.barButtonItem5.Name = "barButtonItem5";
+            this.btnParaGirisi.Caption = "Para Girişi";
+            this.btnParaGirisi.Id = 21;
+            this.btnParaGirisi.ImageOptions.LargeImage = global::Otopark.Properties.Resources.para_ekle;
+            this.btnParaGirisi.Name = "btnParaGirisi";
             // 
-            // barButtonItem6
+            // btnParaCikisi
             // 
-            this.barButtonItem6.Caption = "Para Çıkışı";
-            this.barButtonItem6.Id = 22;
-            this.barButtonItem6.ImageOptions.LargeImage = global::Otopark.Properties.Resources.para_cikar;
-            this.barButtonItem6.Name = "barButtonItem6";
+            this.btnParaCikisi.Caption = "Para Çıkışı";
+            this.btnParaCikisi.Id = 22;
+            this.btnParaCikisi.ImageOptions.LargeImage = global::Otopark.Properties.Resources.para_cikar;
+            this.btnParaCikisi.Name = "btnParaCikisi";
             // 
             // ribbonPageGroup2
             // 
@@ -254,8 +254,8 @@
             this.btnKasaDurumu,
             this.btnAracTipleri,
             this.btnOtopark,
-            this.barButtonItem5,
-            this.barButtonItem6});
+            this.btnParaGirisi,
+            this.btnParaCikisi});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 23;
             this.ribbonControl1.Name = "ribbonControl1";
@@ -378,8 +378,8 @@
         private DevExpress.XtraBars.BarButtonItem btnAracTipleri;
         private DevExpress.XtraBars.BarButtonItem btnOtopark;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem btnParaGirisi;
+        private DevExpress.XtraBars.BarButtonItem btnParaCikisi;
     }
 }
 

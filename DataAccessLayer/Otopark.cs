@@ -66,6 +66,57 @@ namespace DataAccessLayer
                 return dt;
             return null;
         }
+
+        public int OtomobilSayisi()
+        {
+            string query = "SELECT * FROM VARACLAR WHERE ARACTIPADI='Otomobil'";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            DataTable dt = baglanti.executeSelectQuery(query, null);
+            if (dt.Rows.Count > 0)
+                return dt.Rows.Count;
+            return 0;
+
+        }
+        public int MinibusSayisi()
+        {
+            string query = "SELECT * FROM VARACLAR WHERE ARACTIPADI='Minibüs'";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            DataTable dt = baglanti.executeSelectQuery(query, null);
+            if (dt.Rows.Count > 0)
+                return dt.Rows.Count;
+            return 0;
+
+        }
+        public int KamyonSayisi()
+        {
+            string query = "SELECT * FROM VARACLAR WHERE ARACTIPADI='Kamyon'";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            DataTable dt = baglanti.executeSelectQuery(query, null);
+            if (dt.Rows.Count > 0)
+                return dt.Rows.Count;
+            return 0;
+
+        }
+        public int TirSayisi()
+        {
+            string query = "SELECT * FROM VARACLAR WHERE ARACTIPADI='Tır'";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            DataTable dt = baglanti.executeSelectQuery(query, null);
+            if (dt.Rows.Count > 0)
+                return dt.Rows.Count;
+            return 0;
+
+        }
+        public int OtobusSayisi()
+        {
+            string query = "SELECT * FROM VARACLAR WHERE ARACTIPADI='Otobüs'";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            DataTable dt = baglanti.executeSelectQuery(query, null);
+            if (dt.Rows.Count > 0)
+                return dt.Rows.Count;
+            return 0;
+
+        }
         public DataRow AracGetir(string Plaka)
         {
             string query = "SELECT * FROM TBLARACLAR WHERE PLAKA=@PLAKA";
