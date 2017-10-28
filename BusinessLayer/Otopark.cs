@@ -80,6 +80,31 @@ namespace BusinessLayer
 
             return dt;
         }
+        public List<EntityLayer.Otopark.Arac> belliSayidaAracListele(int aracSayisi)
+        {
+            List<EntityLayer.Otopark.Arac> aracList = new List<EntityLayer.Otopark.Arac>();
+            EntityLayer.Otopark.Arac arac = new EntityLayer.Otopark.Arac();
+            try
+            {
+                DataTable dt = otopark.belliSayidaAracListele(aracSayisi);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    arac = new EntityLayer.Otopark.Arac();
+                    arac.Plaka = dr["PLAKA"].ToString();
+                    arac.GirisTarihi = Convert.ToDateTime(dr["GIRISTARIHI"]);
+                    arac.Kontak = Convert.ToBoolean(dr["KONTAK"]);
+                    arac.AboneMi = Convert.ToBoolean(dr["ABONEMI"]);
+                    arac.AracTipAdi = dr["ARACTIPADI"].ToString();
+                    aracList.Add(arac);
+
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            return aracList;
+        }
 
         public DataRow AracGetir(string plaka)
         {

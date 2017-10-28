@@ -56,6 +56,16 @@ namespace DataAccessLayer
                 return dt;
             return null;
         }
+        public DataTable belliSayidaAracListele(int AracSayisi)
+        {
+            string query = "SELECT TOP 20 * FROM VARACLAR";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            
+            DataTable dt = baglanti.executeSelectQuery(query, null);
+            if (dt.Rows.Count > 0)
+                return dt;
+            return null;
+        }
         public DataRow AracGetir(string Plaka)
         {
             string query = "SELECT * FROM TBLARACLAR WHERE PLAKA=@PLAKA";

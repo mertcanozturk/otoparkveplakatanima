@@ -110,7 +110,7 @@
             // groupControl1
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl1.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupControl1.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
@@ -133,6 +133,8 @@
             // 
             // btnAracSayiDetay
             // 
+            this.btnAracSayiDetay.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAracSayiDetay.Appearance.Options.UseFont = true;
             this.btnAracSayiDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAracSayiDetay.ImageOptions.Image")));
             this.btnAracSayiDetay.Location = new System.Drawing.Point(28, 197);
             this.btnAracSayiDetay.Name = "btnAracSayiDetay";
@@ -262,7 +264,7 @@
             // groupControl2
             // 
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImageOptions.Image")));
@@ -285,6 +287,8 @@
             // 
             // btnBugununVerileriDetay
             // 
+            this.btnBugununVerileriDetay.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBugununVerileriDetay.Appearance.Options.UseFont = true;
             this.btnBugununVerileriDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBugununVerileriDetay.ImageOptions.Image")));
             this.btnBugununVerileriDetay.Location = new System.Drawing.Point(28, 197);
             this.btnBugununVerileriDetay.Name = "btnBugununVerileriDetay";
@@ -418,7 +422,7 @@
             // groupControl5
             // 
             this.groupControl5.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl5.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupControl5.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupControl5.AppearanceCaption.Options.UseFont = true;
             this.groupControl5.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl5.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl5.CaptionImageOptions.Image")));
@@ -437,6 +441,8 @@
             // 
             // btnAboneArama
             // 
+            this.btnAboneArama.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAboneArama.Appearance.Options.UseFont = true;
             this.btnAboneArama.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAboneArama.ImageOptions.Image")));
             this.btnAboneArama.Location = new System.Drawing.Point(28, 269);
             this.btnAboneArama.Name = "btnAboneArama";
@@ -504,7 +510,7 @@
             // groupControl4
             // 
             this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl4.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupControl4.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupControl4.AppearanceCaption.Options.UseFont = true;
             this.groupControl4.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl4.CaptionImageOptions.Image")));
@@ -519,6 +525,8 @@
             // 
             // btnPlakaArama
             // 
+            this.btnPlakaArama.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPlakaArama.Appearance.Options.UseFont = true;
             this.btnPlakaArama.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlakaArama.ImageOptions.Image")));
             this.btnPlakaArama.Location = new System.Drawing.Point(28, 132);
             this.btnPlakaArama.Name = "btnPlakaArama";
@@ -557,7 +565,7 @@
             // groupControl3
             // 
             this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupControl3.AppearanceCaption.Options.UseFont = true;
             this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl3.AppearanceCaption.Options.UseTextOptions = true;
@@ -596,57 +604,92 @@
             this.KONTAK});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colId
             // 
+            this.colId.AppearanceCell.Options.UseTextOptions = true;
+            this.colId.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             // 
             // PLAKA
             // 
+            this.PLAKA.AppearanceCell.Options.UseTextOptions = true;
+            this.PLAKA.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PLAKA.AppearanceHeader.Options.UseTextOptions = true;
+            this.PLAKA.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PLAKA.Caption = "Plaka";
-            this.PLAKA.FieldName = "PLAKA";
+            this.PLAKA.FieldName = "Plaka";
             this.PLAKA.Name = "PLAKA";
             this.PLAKA.Visible = true;
             this.PLAKA.VisibleIndex = 0;
             // 
             // ARACTIPADI
             // 
+            this.ARACTIPADI.AppearanceCell.Options.UseTextOptions = true;
+            this.ARACTIPADI.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ARACTIPADI.AppearanceHeader.Options.UseTextOptions = true;
+            this.ARACTIPADI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.ARACTIPADI.Caption = "Araç Tipi";
-            this.ARACTIPADI.FieldName = "ARACTIPADI";
+            this.ARACTIPADI.FieldName = "AracTipAdi";
             this.ARACTIPADI.Name = "ARACTIPADI";
             this.ARACTIPADI.Visible = true;
             this.ARACTIPADI.VisibleIndex = 1;
             // 
             // ARACTIPNO
             // 
+            this.ARACTIPNO.AppearanceCell.Options.UseTextOptions = true;
+            this.ARACTIPNO.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ARACTIPNO.AppearanceHeader.Options.UseTextOptions = true;
+            this.ARACTIPNO.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.ARACTIPNO.FieldName = "ARACTIPNO";
             this.ARACTIPNO.Name = "ARACTIPNO";
             // 
             // ABONENO
             // 
+            this.ABONENO.AppearanceCell.Options.UseTextOptions = true;
+            this.ABONENO.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ABONENO.AppearanceHeader.Options.UseTextOptions = true;
+            this.ABONENO.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.ABONENO.FieldName = "ABONENO";
             this.ABONENO.Name = "ABONENO";
             // 
             // ABONEMI
             // 
+            this.ABONEMI.AppearanceCell.Options.UseTextOptions = true;
+            this.ABONEMI.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ABONEMI.AppearanceHeader.Options.UseTextOptions = true;
+            this.ABONEMI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.ABONEMI.Caption = "Abone Mi";
-            this.ABONEMI.FieldName = "ABONEMI";
+            this.ABONEMI.FieldName = "AboneMi";
             this.ABONEMI.Name = "ABONEMI";
             this.ABONEMI.Visible = true;
             this.ABONEMI.VisibleIndex = 2;
             // 
             // GIRISTARIHI
             // 
-            this.GIRISTARIHI.FieldName = "GIRISTARIHI";
+            this.GIRISTARIHI.AppearanceCell.Options.UseTextOptions = true;
+            this.GIRISTARIHI.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.GIRISTARIHI.AppearanceHeader.Options.UseTextOptions = true;
+            this.GIRISTARIHI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.GIRISTARIHI.Caption = "Giriş Tarihi";
+            this.GIRISTARIHI.FieldName = "GirisTarihi";
             this.GIRISTARIHI.Name = "GIRISTARIHI";
             this.GIRISTARIHI.Visible = true;
             this.GIRISTARIHI.VisibleIndex = 3;
             // 
             // KONTAK
             // 
-            this.KONTAK.FieldName = "KONTAK";
+            this.KONTAK.AppearanceCell.Options.UseTextOptions = true;
+            this.KONTAK.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.KONTAK.AppearanceHeader.Options.UseTextOptions = true;
+            this.KONTAK.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.KONTAK.Caption = "Kontak";
+            this.KONTAK.FieldName = "Kontak";
             this.KONTAK.Name = "KONTAK";
             this.KONTAK.Visible = true;
             this.KONTAK.VisibleIndex = 4;

@@ -17,10 +17,22 @@ namespace Otopark
         {
             InitializeComponent();
         }
+        List<EntityLayer.Otopark.Arac> aracList = new List<EntityLayer.Otopark.Arac>();
+        EntityLayer.Otopark.Arac arac = new EntityLayer.Otopark.Arac();
         BusinessLayer.Otopark Bsotopark = new BusinessLayer.Otopark();
+
+        void Listele()
+        {
+            aracList = new List<EntityLayer.Otopark.Arac>();
+            arac = new EntityLayer.Otopark.Arac();
+            aracList = Bsotopark.belliSayidaAracListele(20);
+            var source = new BindingSource();
+            source.DataSource = aracList;
+            gridControl1.DataSource = source;
+        }
         private void GenelForm_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = Bsotopark.Listele("",true,"");
+            Listele();
 
         }
     }

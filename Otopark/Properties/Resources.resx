@@ -133,14 +133,17 @@
   <data name="presentation-chart-reports-sales-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\presentation-chart-reports-sales-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="subscriber-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\subscriber-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tend-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tend-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="User_Plus-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User_Plus-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="elite-captain-black-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elite-captain-black-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="para-ekle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\para-ekle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="substip-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\substip-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,7 +175,10 @@
   <data name="Car-List-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Car-List-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tend-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tend-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="subscriber-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subscriber-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="para-cikar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\para-cikar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

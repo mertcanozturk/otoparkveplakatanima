@@ -173,6 +173,26 @@ namespace Otopark.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap para_cikar {
+            get {
+                object obj = ResourceManager.GetObject("para-cikar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap para_ekle {
+            get {
+                object obj = ResourceManager.GetObject("para-ekle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap presentation_chart_reports_sales_32 {
             get {
                 object obj = ResourceManager.GetObject("presentation-chart-reports-sales-32", resourceCulture);

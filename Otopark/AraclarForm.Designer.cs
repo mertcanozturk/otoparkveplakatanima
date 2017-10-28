@@ -90,6 +90,7 @@
             this.groupControl1.Size = new System.Drawing.Size(232, 516);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Arama";
+            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // btnTemizle
             // 

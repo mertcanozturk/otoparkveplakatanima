@@ -87,5 +87,10 @@ namespace Otopark
             decimal a = control.UcretHesapla(1, dt);
             MessageBox.Show(a.ToString());
         }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
