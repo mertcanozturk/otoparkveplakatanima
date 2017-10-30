@@ -33,6 +33,7 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.comboArac = new DevExpress.XtraEditors.ComboBoxEdit();
             this.captureViewer = new Ozeki.Media.VideoViewerWF();
+            this.BtnCikisYap = new DevExpress.XtraEditors.SimpleButton();
             this.btnGirisiOnayla = new DevExpress.XtraEditors.SimpleButton();
             this.lblAracAboneDegil = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -52,27 +53,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.liveViewer = new Ozeki.Media.VideoViewerWF();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.videoViewerWF2 = new Ozeki.Media.VideoViewerWF();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.videoViewerWF3 = new Ozeki.Media.VideoViewerWF();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.videoViewerWF4 = new Ozeki.Media.VideoViewerWF();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboArac.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlaka.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.comboArac);
             this.groupControl1.Controls.Add(this.captureViewer);
+            this.groupControl1.Controls.Add(this.BtnCikisYap);
             this.groupControl1.Controls.Add(this.btnGirisiOnayla);
             this.groupControl1.Controls.Add(this.lblAracAboneDegil);
             this.groupControl1.Controls.Add(this.groupBox1);
@@ -83,7 +76,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(244, 642);
+            this.groupControl1.Size = new System.Drawing.Size(244, 547);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Araç Bilgileri";
             // 
@@ -110,13 +103,28 @@
             this.captureViewer.TabIndex = 13;
             this.captureViewer.Text = "captureViewer";
             // 
+            // BtnCikisYap
+            // 
+            this.BtnCikisYap.AppearancePressed.Options.UseTextOptions = true;
+            this.BtnCikisYap.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.BtnCikisYap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCikisYap.ImageOptions.Image")));
+            this.BtnCikisYap.Location = new System.Drawing.Point(14, 507);
+            this.BtnCikisYap.Name = "BtnCikisYap";
+            this.BtnCikisYap.Size = new System.Drawing.Size(212, 35);
+            this.BtnCikisYap.TabIndex = 8;
+            this.BtnCikisYap.Text = "Çıkış Yap";
+            this.BtnCikisYap.Click += new System.EventHandler(this.BtnCikisYap_Click);
+            // 
             // btnGirisiOnayla
             // 
-            this.btnGirisiOnayla.Location = new System.Drawing.Point(14, 464);
+            this.btnGirisiOnayla.AppearancePressed.Options.UseTextOptions = true;
+            this.btnGirisiOnayla.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.btnGirisiOnayla.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGirisiOnayla.ImageOptions.Image")));
+            this.btnGirisiOnayla.Location = new System.Drawing.Point(15, 464);
             this.btnGirisiOnayla.Name = "btnGirisiOnayla";
-            this.btnGirisiOnayla.Size = new System.Drawing.Size(212, 45);
+            this.btnGirisiOnayla.Size = new System.Drawing.Size(211, 35);
             this.btnGirisiOnayla.TabIndex = 8;
-            this.btnGirisiOnayla.Text = "Girişi Onayla";
+            this.btnGirisiOnayla.Text = "Giriş Yap";
             this.btnGirisiOnayla.Click += new System.EventHandler(this.btnGirisiOnayla_Click);
             // 
             // lblAracAboneDegil
@@ -282,7 +290,7 @@
             this.groupBox2.Controls.Add(this.liveViewer);
             this.groupBox2.Location = new System.Drawing.Point(250, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(439, 267);
+            this.groupBox2.Size = new System.Drawing.Size(925, 533);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cam1";
@@ -300,103 +308,19 @@
             this.liveViewer.Location = new System.Drawing.Point(70, 20);
             this.liveViewer.Name = "liveViewer";
             this.liveViewer.RotateAngle = 0;
-            this.liveViewer.Size = new System.Drawing.Size(296, 232);
+            this.liveViewer.Size = new System.Drawing.Size(771, 457);
             this.liveViewer.TabIndex = 1;
             this.liveViewer.Text = "liveViewer";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.videoViewerWF2);
-            this.groupBox3.Location = new System.Drawing.Point(736, 0);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(439, 267);
-            this.groupBox3.TabIndex = 12;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Cam2";
-            // 
-            // videoViewerWF2
-            // 
-            this.videoViewerWF2.BackColor = System.Drawing.Color.White;
-            this.videoViewerWF2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("videoViewerWF2.BackgroundImage")));
-            this.videoViewerWF2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.videoViewerWF2.ContextMenuEnabled = true;
-            this.videoViewerWF2.FlipMode = Ozeki.Media.FlipMode.None;
-            this.videoViewerWF2.ForeColor = System.Drawing.Color.White;
-            this.videoViewerWF2.FrameStretch = Ozeki.Media.FrameStretch.Uniform;
-            this.videoViewerWF2.FullScreenEnabled = true;
-            this.videoViewerWF2.Location = new System.Drawing.Point(70, 24);
-            this.videoViewerWF2.Name = "videoViewerWF2";
-            this.videoViewerWF2.RotateAngle = 0;
-            this.videoViewerWF2.Size = new System.Drawing.Size(296, 233);
-            this.videoViewerWF2.TabIndex = 11;
-            this.videoViewerWF2.Text = "videoViewerWF1";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.videoViewerWF3);
-            this.groupBox4.Location = new System.Drawing.Point(250, 270);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(439, 265);
-            this.groupBox4.TabIndex = 12;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Cam3";
-            // 
-            // videoViewerWF3
-            // 
-            this.videoViewerWF3.BackColor = System.Drawing.Color.White;
-            this.videoViewerWF3.BackgroundImage = global::Otopark.Properties.Resources.no1;
-            this.videoViewerWF3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.videoViewerWF3.ContextMenuEnabled = true;
-            this.videoViewerWF3.FlipMode = Ozeki.Media.FlipMode.None;
-            this.videoViewerWF3.ForeColor = System.Drawing.Color.White;
-            this.videoViewerWF3.FrameStretch = Ozeki.Media.FrameStretch.Uniform;
-            this.videoViewerWF3.FullScreenEnabled = true;
-            this.videoViewerWF3.Location = new System.Drawing.Point(70, 24);
-            this.videoViewerWF3.Name = "videoViewerWF3";
-            this.videoViewerWF3.RotateAngle = 0;
-            this.videoViewerWF3.Size = new System.Drawing.Size(296, 233);
-            this.videoViewerWF3.TabIndex = 11;
-            this.videoViewerWF3.Text = "videoViewerWF1";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.videoViewerWF4);
-            this.groupBox5.Location = new System.Drawing.Point(736, 270);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(439, 265);
-            this.groupBox5.TabIndex = 12;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Cam4";
-            // 
-            // videoViewerWF4
-            // 
-            this.videoViewerWF4.BackColor = System.Drawing.Color.White;
-            this.videoViewerWF4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("videoViewerWF4.BackgroundImage")));
-            this.videoViewerWF4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.videoViewerWF4.ContextMenuEnabled = true;
-            this.videoViewerWF4.FlipMode = Ozeki.Media.FlipMode.None;
-            this.videoViewerWF4.ForeColor = System.Drawing.Color.White;
-            this.videoViewerWF4.FrameStretch = Ozeki.Media.FrameStretch.Uniform;
-            this.videoViewerWF4.FullScreenEnabled = true;
-            this.videoViewerWF4.Location = new System.Drawing.Point(70, 24);
-            this.videoViewerWF4.Name = "videoViewerWF4";
-            this.videoViewerWF4.RotateAngle = 0;
-            this.videoViewerWF4.Size = new System.Drawing.Size(296, 233);
-            this.videoViewerWF4.TabIndex = 11;
-            this.videoViewerWF4.Text = "videoViewerWF1";
             // 
             // AracGirisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1187, 642);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
+            this.ClientSize = new System.Drawing.Size(1187, 547);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupControl1);
             this.Name = "AracGirisForm";
-            this.Text = "Araç Girişi";
+            this.Text = "Araç Giriş Çıkış";
             this.Load += new System.EventHandler(this.AracGirisForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -406,9 +330,6 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlaka.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -434,14 +355,9 @@
         private System.Windows.Forms.Label label11;
         private DevExpress.XtraEditors.SimpleButton btnGirisiOnayla;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private Ozeki.Media.VideoViewerWF videoViewerWF2;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private Ozeki.Media.VideoViewerWF videoViewerWF3;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private Ozeki.Media.VideoViewerWF videoViewerWF4;
         private Ozeki.Media.VideoViewerWF captureViewer;
         private Ozeki.Media.VideoViewerWF liveViewer;
         private DevExpress.XtraEditors.ComboBoxEdit comboArac;
+        private DevExpress.XtraEditors.SimpleButton BtnCikisYap;
     }
 }

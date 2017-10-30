@@ -84,5 +84,12 @@ namespace Otopark
                 Application.Exit();
             }
         }
+
+        private void btnOtopark_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            GenelForm frm = new GenelForm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

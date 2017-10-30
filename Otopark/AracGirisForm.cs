@@ -8,6 +8,8 @@ using openalprnet;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Data;
+
 namespace Otopark
 {
     public partial class AracGirisForm : DevExpress.XtraEditors.XtraForm
@@ -18,17 +20,26 @@ namespace Otopark
         private MediaConnector _connector;
         private DrawingImageProvider _liveProvider;
         private DrawingImageProvider _frameCaptureProvider;
+
         EntityLayer.Arac arac = new EntityLayer.Arac();
         EntityLayer.Arac.AboneBilgileri abone = new EntityLayer.Arac.AboneBilgileri();
         EntityLayer.Arac.AboneTip aboneTip = new EntityLayer.Arac.AboneTip();
-        BusinessLayer.Arac BsArac = new BusinessLayer.Arac();
-        Classlar.Bildirim mesaj = new Classlar.Bildirim();
-        BusinessLayer.Otopark Bsotopark = new BusinessLayer.Otopark();
+        EntityLayer.Satis satis = new EntityLayer.Satis();
         EntityLayer.Otopark.Arac otoparkAraci = new EntityLayer.Otopark.Arac();
         EntityLayer.Arac.AracTip aracTip = new EntityLayer.Arac.AracTip();
+
+        BusinessLayer.Arac BsArac = new BusinessLayer.Arac();
+        BusinessLayer.Otopark Bsotopark = new BusinessLayer.Otopark();
+        BusinessLayer.Satis BsSatis = new BusinessLayer.Satis();
+
         List<EntityLayer.Arac.AracTip> aracTips = new List<EntityLayer.Arac.AracTip>();
-        Classlar.AracGiris control = new Classlar.AracGiris();
+
+        Classlar.Bildirim mesaj = new Classlar.Bildirim();
+        Classlar.AracGiris aracGirisControl = new Classlar.AracGiris();
+        Classlar.AracCikis aracCikisControl = new Classlar.AracCikis();
+
         bool AboneMi = false;
+        string oncekiPlaka = "";
         public static string AssemblyDirectory
         {
             get
@@ -73,9 +84,8 @@ namespace Otopark
         {
             try
             {
-                var sec = 1;
 
-                _capture.SetInterval(new TimeSpan(0, 0, 0, sec));
+                _capture.SetInterval(new TimeSpan(1000));
                 _capture.Start();
                 _capture.OnFrameCaptured += _capture_OnFrameCaptured;
 
@@ -104,7 +114,7 @@ namespace Otopark
             {
 
             }
-         
+
 
         }
 
@@ -116,41 +126,46 @@ namespace Otopark
                 plaka = plaka.Trim();
                 if (plaka.Length == 7 || plaka.Length == 8)
                 {
-                    lblAracAboneDegil.Visible = true; ;
-                    lblAracAboneDegil.Text = "ARAÇ ABONE DEĞİL.";
-                    string plaka1 = txtPlaka.Text;
-                    AboneMi = BsArac.AboneMi(plaka1.Trim());
-                    if (AboneMi)
-                    {
 
-                        lblAracAboneDegil.Visible = false;
-                        abone = BsArac.AboneGetir(plaka);
-                        lblAdi.Text = abone.Adi;
-                        lblAboneTipi.Text = abone.AbonelikAdi;
-                        comboArac.Text = abone.AracTipAdi;
-                        TimeSpan fark = abone.BitisTarihi - DateTime.Now;
-                        if (fark.Minutes < 1)
+                    if (plaka == oncekiPlaka)
+                    {
+                        lblAracAboneDegil.Visible = true; ;
+                        lblAracAboneDegil.Text = "ARAÇ ABONE DEĞİL.";
+                        AboneMi = BsArac.AboneMi(plaka.Trim());
+
+                        if (AboneMi)
                         {
-                            lblAracAboneDegil.Visible = true;
-                            lblAracAboneDegil.Text = "ABONELİĞİ BİTTİ.";
-                            lblKalanAbonelik.Text = "0 gün 0 saat 0 dakika";
-                            AboneMi = false;
+                            lblAracAboneDegil.Visible = false;
+                            abone = BsArac.AboneGetir(plaka);
+                            lblAdi.Text = abone.Adi;
+                            lblAboneTipi.Text = abone.AbonelikAdi;
+                            comboArac.Text = abone.AracTipAdi;
+                            TimeSpan fark = abone.BitisTarihi - DateTime.Now;
+                            if (fark.Minutes < 1)
+                            {
+                                lblAracAboneDegil.Visible = true;
+                                lblAracAboneDegil.Text = "ABONELİĞİ BİTTİ.";
+                                lblKalanAbonelik.Text = "0 gün 0 saat 0 dakika";
+                                AboneMi = false;
+                            }
+                            else
+                            {
+                                lblKalanAbonelik.Text = arac.okuZaman(fark);
+
+                            }
+                            lblSoyadi.Text = abone.Soyadi;
+                            lblTelefon.Text = abone.Telefon;
+
                         }
                         else
                         {
-                            lblKalanAbonelik.Text = arac.okuZaman(fark);
-
+                            lblAracAboneDegil.Visible = true;
                         }
-                        lblSoyadi.Text = abone.Soyadi;
-                        lblTelefon.Text = abone.Telefon;
 
+                        btnGirisiOnayla.Enabled = true;
                     }
-                    else
-                    {
-                        lblAracAboneDegil.Visible = true;
-                    }
+                    oncekiPlaka = plaka;
 
-                    btnGirisiOnayla.Enabled = true;
 
                 }
             }
@@ -163,7 +178,7 @@ namespace Otopark
         {
             string plaka = txtPlaka.Text;
             Bsotopark = new BusinessLayer.Otopark();
-            if (control.AracOtoparktaMi(plaka.Trim()))
+            if (aracGirisControl.AracOtoparktaMi(plaka.Trim()))
                 mesaj.Uyari("Araç zaten otoparkta", "Uyarı");
             else
             {
@@ -176,7 +191,7 @@ namespace Otopark
                 otoparkAraci.AracTipAdi = comboArac.Text;
                 otoparkAraci.Kontak = checkBox1.Checked;
                 otoparkAraci.Plaka = plaka.Trim();
-                otoparkAraci.AboneNo = AboneMi?abone.Id:0;
+                otoparkAraci.AboneNo = AboneMi ? abone.Id : 0;
                 otoparkAraci.AboneMi = AboneMi;
                 if (Bsotopark.aracKaydet(otoparkAraci))
                     mesaj.Bilgi("Araç otoparka başarıyla giriş yaptı.", "Bilgi");
@@ -185,7 +200,7 @@ namespace Otopark
             }
 
         }
-      
+
         private void processImageFile(string fileName)
         {
             var region = "eu";
@@ -205,7 +220,7 @@ namespace Otopark
                 //var i = 1;
                 foreach (var result in results.Plates)
                 {
-                    var rect = control.boundingRectangle(result.PlatePoints);
+                    var rect = aracGirisControl.boundingRectangle(result.PlatePoints);
                     var img = Image.FromFile(fileName);
                     var cropped = cropImage(img, rect);
                     images.Add(cropped);
@@ -219,8 +234,8 @@ namespace Otopark
 
                 try
                 {
-             
-                    
+
+
                     string plaka = plakalar[0];
                     plaka = plaka.Trim();
                     if (plaka.Length == 7 || plaka.Length == 8)
@@ -241,7 +256,7 @@ namespace Otopark
                             lblAboneTipi.Text = abone.AbonelikAdi;
                             comboArac.Text = abone.AracTipAdi;
                             TimeSpan fark = abone.BitisTarihi - DateTime.Now;
-                            if (fark.Minutes<1)
+                            if (fark.Minutes < 1)
                             {
                                 lblAracAboneDegil.Visible = true;
                                 lblAracAboneDegil.Text = "ARAÇ ABONELİK SÜRESİ SONA ERDİ.";
@@ -278,7 +293,7 @@ namespace Otopark
 
         }
 
-    
+
 
         private static Image cropImage(Image img, System.Drawing.Rectangle cropArea)
         {
@@ -286,11 +301,11 @@ namespace Otopark
             return bmpImage.Clone(cropArea, bmpImage.PixelFormat);
         }
 
-       
+
 
         private void AracGirisForm_Load(object sender, EventArgs e)
         {
-            aracTips=BsArac.AracTipGetir();
+            aracTips = BsArac.AracTipGetir();
 
             foreach (var item in aracTips)
             {
@@ -319,7 +334,7 @@ namespace Otopark
             otoparkAraci = new EntityLayer.Otopark.Arac();
             lblAdi.Text = "";
             lblAboneTipi.Text = "";
-            comboArac.Text = "";
+            comboArac.Text = "Otomobil";
             lblKalanAbonelik.Text = "";
             lblSoyadi.Text = "";
             lblTelefon.Text = "";
@@ -327,6 +342,38 @@ namespace Otopark
             plakaKontrol();
         }
 
+        private void BtnCikisYap_Click(object sender, EventArgs e)
+        {
+            string plaka = txtPlaka.Text;
+            if (!Bsotopark.aracOtoparktaMi(plaka.Trim()))
+                mesaj.Uyari("Araç otoparkta değil!", "Uyarı");
+            else
+            {
+                DataRow OtoparkAraci = Bsotopark.AracGetir(plaka.Trim());
+                satis.AracTipNo = Convert.ToInt32(OtoparkAraci[2]);
+                satis.Plaka = OtoparkAraci[1].ToString();
+                satis.AboneNo = Convert.ToInt32(OtoparkAraci[3].ToString());
+                satis.GirisTarihi = Convert.ToDateTime(OtoparkAraci[4]);
+                satis.Kontak = Convert.ToBoolean(OtoparkAraci[5]);
+                satis.Ucret = aracCikisControl.UcretHesapla(satis.AracTipNo, satis.GirisTarihi);
+                satis.CikisTarihi = DateTime.Now;
+                satis.KullaniciId = 1;
+
+                if (mesaj.Soru("Araç otoparktan silinsin mi?", "Araç Çıkış"))
+                    if (BsSatis.Kaydet(satis))
+                    {
+                        if (Bsotopark.aracSil(plaka.Trim()))
+                            mesaj.Bilgi("Araç çıkışı yapıldı.", "Bilgi");
+                        else
+                            mesaj.Hata("Silerken hata oluştu.", "Hata");
+                    }
+                    else
+                        mesaj.Hata("Satışı kaydederken hata oluştu.", "Hata");
+                else
+                    mesaj.Bilgi("İptal edildi.", "Bilgi");
+            }
+
+        }
     }
 
 }

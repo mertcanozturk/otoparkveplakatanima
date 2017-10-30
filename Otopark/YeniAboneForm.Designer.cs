@@ -30,12 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YeniAboneForm));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnCikis = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.comboAbonelikTipi = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboAracTipi = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtModel = new DevExpress.XtraEditors.TextEdit();
+            this.txtMarka = new DevExpress.XtraEditors.TextEdit();
             this.txtPlaka = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,25 +52,19 @@
             this.txtAdres = new DevExpress.XtraEditors.MemoEdit();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAdi = new DevExpress.XtraEditors.TextEdit();
-            this.txtMarka = new DevExpress.XtraEditors.TextEdit();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtModel = new DevExpress.XtraEditors.TextEdit();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCikis = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboAbonelikTipi.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboAracTipi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtModel.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMarka.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlaka.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoyadi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMarka.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtModel.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -80,6 +80,25 @@
             this.groupControl1.Size = new System.Drawing.Size(534, 277);
             this.groupControl1.TabIndex = 0;
             // 
+            // btnCikis
+            // 
+            this.btnCikis.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.ImageOptions.Image")));
+            this.btnCikis.Location = new System.Drawing.Point(402, 231);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(90, 32);
+            this.btnCikis.TabIndex = 11;
+            this.btnCikis.Text = "Çıkış";
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
+            this.btnKaydet.Location = new System.Drawing.Point(302, 231);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(90, 32);
+            this.btnKaydet.TabIndex = 10;
+            this.btnKaydet.Text = "Kaydet";
+            // 
             // comboAbonelikTipi
             // 
             this.comboAbonelikTipi.EditValue = "4 Günlük";
@@ -88,7 +107,7 @@
             this.comboAbonelikTipi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboAbonelikTipi.Size = new System.Drawing.Size(120, 20);
-            this.comboAbonelikTipi.TabIndex = 9;
+            this.comboAbonelikTipi.TabIndex = 5;
             // 
             // label5
             // 
@@ -123,8 +142,9 @@
             this.comboAracTipi.Name = "comboAracTipi";
             this.comboAracTipi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboAracTipi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.comboAracTipi.Size = new System.Drawing.Size(139, 20);
-            this.comboAracTipi.TabIndex = 9;
+            this.comboAracTipi.TabIndex = 7;
             // 
             // label7
             // 
@@ -135,6 +155,24 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Araç Tipi";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(21, 135);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Model";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(21, 101);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(36, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Marka";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -144,12 +182,26 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Plaka";
             // 
+            // txtModel
+            // 
+            this.txtModel.Location = new System.Drawing.Point(59, 132);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(139, 20);
+            this.txtModel.TabIndex = 9;
+            // 
+            // txtMarka
+            // 
+            this.txtMarka.Location = new System.Drawing.Point(59, 98);
+            this.txtMarka.Name = "txtMarka";
+            this.txtMarka.Size = new System.Drawing.Size(139, 20);
+            this.txtMarka.TabIndex = 8;
+            // 
             // txtPlaka
             // 
             this.txtPlaka.Location = new System.Drawing.Point(59, 26);
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.Size = new System.Drawing.Size(139, 20);
-            this.txtPlaka.TabIndex = 2;
+            this.txtPlaka.TabIndex = 6;
             // 
             // groupBox1
             // 
@@ -186,7 +238,7 @@
             this.txtTelefon.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtTelefon.Properties.Mask.SaveLiteral = false;
             this.txtTelefon.Size = new System.Drawing.Size(166, 20);
-            this.txtTelefon.TabIndex = 2;
+            this.txtTelefon.TabIndex = 3;
             // 
             // label2
             // 
@@ -218,7 +270,7 @@
             this.txtAdres.Location = new System.Drawing.Point(61, 140);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(167, 84);
-            this.txtAdres.TabIndex = 2;
+            this.txtAdres.TabIndex = 4;
             // 
             // label4
             // 
@@ -234,57 +286,7 @@
             this.txtAdi.Location = new System.Drawing.Point(62, 25);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(166, 20);
-            this.txtAdi.TabIndex = 2;
-            // 
-            // txtMarka
-            // 
-            this.txtMarka.Location = new System.Drawing.Point(59, 98);
-            this.txtMarka.Name = "txtMarka";
-            this.txtMarka.Size = new System.Drawing.Size(139, 20);
-            this.txtMarka.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(21, 101);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Marka";
-            // 
-            // txtModel
-            // 
-            this.txtModel.Location = new System.Drawing.Point(59, 132);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(139, 20);
-            this.txtModel.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 135);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Model";
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(302, 231);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(90, 32);
-            this.btnKaydet.TabIndex = 10;
-            this.btnKaydet.Text = "Kaydet";
-            // 
-            // btnCikis
-            // 
-            this.btnCikis.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(402, 231);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(90, 32);
-            this.btnCikis.TabIndex = 10;
-            this.btnCikis.Text = "Çıkış";
+            this.txtAdi.TabIndex = 1;
             // 
             // YeniAboneForm
             // 
@@ -292,9 +294,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 286);
             this.Controls.Add(this.groupControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "YeniAboneForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yeni Abone Ekle";
+            this.Load += new System.EventHandler(this.YeniAboneForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -302,6 +306,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboAracTipi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtModel.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMarka.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlaka.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -309,8 +315,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoyadi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMarka.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtModel.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

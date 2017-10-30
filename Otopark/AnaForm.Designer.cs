@@ -96,14 +96,16 @@
             this.btnOtopark.Id = 20;
             this.btnOtopark.ImageOptions.LargeImage = global::Otopark.Properties.Resources.tend_32;
             this.btnOtopark.Name = "btnOtopark";
+            this.btnOtopark.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOtopark_ItemClick);
             // 
             // btnAracGiris
             // 
-            this.btnAracGiris.Caption = "Araç Girişi";
+            this.btnAracGiris.Caption = "Araç Giriş Çıkış ";
             this.btnAracGiris.Id = 4;
             this.btnAracGiris.ImageOptions.Image = global::Otopark.Properties.Resources.Car_Key_32;
             this.btnAracGiris.ImageOptions.LargeImage = global::Otopark.Properties.Resources.Car_Key_32;
             this.btnAracGiris.Name = "btnAracGiris";
+            this.btnAracGiris.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnAracGiris.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAracGiris_ItemClick);
             // 
             // btnAraclar

@@ -136,7 +136,7 @@ namespace BusinessLayer
             }
             catch (Exception e)
             {
-                throw;
+                return null;
             }
 
             return row;

@@ -71,7 +71,6 @@
             this.btnPlakaArama = new DevExpress.XtraEditors.SimpleButton();
             this.label24 = new System.Windows.Forms.Label();
             this.txtAracPlaka = new DevExpress.XtraEditors.TextEdit();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -99,7 +98,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAracPlaka.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
@@ -448,7 +446,7 @@
             this.btnAboneArama.Location = new System.Drawing.Point(28, 269);
             this.btnAboneArama.Name = "btnAboneArama";
             this.btnAboneArama.Size = new System.Drawing.Size(196, 42);
-            this.btnAboneArama.TabIndex = 2;
+            this.btnAboneArama.TabIndex = 3;
             this.btnAboneArama.Text = "Arama Yap";
             this.btnAboneArama.Click += new System.EventHandler(this.btnAboneArama_Click);
             // 
@@ -489,7 +487,7 @@
             this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textEdit3.Properties.Appearance.Options.UseFont = true;
             this.textEdit3.Size = new System.Drawing.Size(196, 30);
-            this.textEdit3.TabIndex = 3;
+            this.textEdit3.TabIndex = 2;
             // 
             // txtAbonePlaka
             // 
@@ -498,7 +496,7 @@
             this.txtAbonePlaka.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAbonePlaka.Properties.Appearance.Options.UseFont = true;
             this.txtAbonePlaka.Size = new System.Drawing.Size(196, 30);
-            this.txtAbonePlaka.TabIndex = 3;
+            this.txtAbonePlaka.TabIndex = 1;
             // 
             // txtAboneAdi
             // 
@@ -507,7 +505,7 @@
             this.txtAboneAdi.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAboneAdi.Properties.Appearance.Options.UseFont = true;
             this.txtAboneAdi.Size = new System.Drawing.Size(196, 30);
-            this.txtAboneAdi.TabIndex = 3;
+            this.txtAboneAdi.TabIndex = 0;
             // 
             // groupControl4
             // 
@@ -533,7 +531,7 @@
             this.btnPlakaArama.Location = new System.Drawing.Point(28, 132);
             this.btnPlakaArama.Name = "btnPlakaArama";
             this.btnPlakaArama.Size = new System.Drawing.Size(196, 42);
-            this.btnPlakaArama.TabIndex = 6;
+            this.btnPlakaArama.TabIndex = 1;
             this.btnPlakaArama.Text = "Arama Yap";
             this.btnPlakaArama.Click += new System.EventHandler(this.btnPlakaArama_Click);
             // 
@@ -554,7 +552,7 @@
             this.txtAracPlaka.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAracPlaka.Properties.Appearance.Options.UseFont = true;
             this.txtAracPlaka.Size = new System.Drawing.Size(196, 30);
-            this.txtAracPlaka.TabIndex = 8;
+            this.txtAracPlaka.TabIndex = 0;
             // 
             // panel4
             // 
@@ -730,7 +728,6 @@
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAracPlaka.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
@@ -776,7 +773,6 @@
         private System.Windows.Forms.Label label42;
         private DevExpress.XtraEditors.TextEdit txtAboneAdi;
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private System.Windows.Forms.Panel panel4;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraGrid.GridControl gridControl1;
