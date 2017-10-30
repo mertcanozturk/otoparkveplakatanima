@@ -55,5 +55,25 @@ namespace BusinessLayer
             }
             return aboneList;
         }
+        public bool Kaydet(EntityLayer.Abone abone)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                if (aboneControl.AboneEkle(abone))
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public List<EntityLayer.AboneTip> aboneTipGetir()
+        {
+           return aboneControl.AboneTipListesiGetir();
+        }
     }
 }

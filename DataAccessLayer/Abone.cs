@@ -18,7 +18,7 @@ namespace DataAccessLayer
             baglanti = new dbConnection();
         }
 
-        public bool AboneEkle(EntityLayer.Abone abone, EntityLayer.AboneTip aboneTip)
+        public bool AboneEkle(EntityLayer.Abone abone)
         {
             string query = "INSERT INTO TBLABONE (ADI,SOYADI,ADRES,TELEFON,PLAKA,ARACTIPNO,GIRISTARIH,BITISTARIHI,ABONELIKTIPINO,KULLANICIID) VALUES(@ADI,@SOYADI,@ADRES,@TELEFON,@PLAKA,@ARACTIPNO,@GIRISTARIH,@BITISTARIHI,@ABONELIKTIPINO,@BITISTARIHI,@KULLANICIID)";
             SqlParameter[] parameter = new SqlParameter[10];
@@ -55,6 +55,25 @@ namespace DataAccessLayer
                 return dt;
             return dt;
         }
+
+        public List<EntityLayer.AboneTip> AboneTipListesiGetir()
+        {
+            string sorgu = string.Format("SELECT * FROM TBLABONELIKTIPI");
+            DataTable dt = baglanti.executeSelectQuery(sorgu, null);
+            List<EntityLayer.AboneTip> aboneTips = new List<EntityLayer.AboneTip>();
+            EntityLayer.AboneTip aboneTip = new EntityLayer.AboneTip();
+            foreach (DataRow dr in dt.Rows)
+            {
+                aboneTip = new EntityLayer.AboneTip();
+                aboneTip.Id = Convert.ToInt32(dr[0]);
+                aboneTip.Adi = dr[1].ToString();
+                aboneTip.Sure= Convert.ToInt32(dr[2]);
+                aboneTip.Ucret = Convert.ToDecimal(dr[3]);
+                aboneTips.Add(aboneTip);
+            }
+            return aboneTips;
+        }
+
         public DataTable Listele(string Plaka, string Adi, string Soyadi, string aracTipi, string Telefon)
         {
             string sorgu = string.Format("SELECT * FROM VABONE WHERE ADI LIKE '%' + @ADI + '%' AND SOYADI LIKE '%' + @SOYADI + '%' AND PLAKA LIKE '%' + @PLAKA + '%' AND ARACTIPADI LIKE '%' + @ARACTIPADI + '%' AND TELEFON LIKE '%' + @TELEFON + '%'");

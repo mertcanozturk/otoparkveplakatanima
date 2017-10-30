@@ -290,7 +290,7 @@
             this.groupBox2.Controls.Add(this.liveViewer);
             this.groupBox2.Location = new System.Drawing.Point(250, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(925, 533);
+            this.groupBox2.Size = new System.Drawing.Size(959, 533);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cam1";
@@ -305,10 +305,10 @@
             this.liveViewer.ForeColor = System.Drawing.Color.White;
             this.liveViewer.FrameStretch = Ozeki.Media.FrameStretch.Uniform;
             this.liveViewer.FullScreenEnabled = true;
-            this.liveViewer.Location = new System.Drawing.Point(70, 20);
+            this.liveViewer.Location = new System.Drawing.Point(38, 24);
             this.liveViewer.Name = "liveViewer";
             this.liveViewer.RotateAngle = 0;
-            this.liveViewer.Size = new System.Drawing.Size(771, 457);
+            this.liveViewer.Size = new System.Drawing.Size(881, 457);
             this.liveViewer.TabIndex = 1;
             this.liveViewer.Text = "liveViewer";
             // 
@@ -316,7 +316,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1187, 547);
+            this.ClientSize = new System.Drawing.Size(1247, 547);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupControl1);
             this.Name = "AracGirisForm";

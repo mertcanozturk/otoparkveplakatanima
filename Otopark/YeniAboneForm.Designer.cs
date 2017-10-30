@@ -98,6 +98,7 @@
             this.btnKaydet.Size = new System.Drawing.Size(90, 32);
             this.btnKaydet.TabIndex = 10;
             this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // comboAbonelikTipi
             // 

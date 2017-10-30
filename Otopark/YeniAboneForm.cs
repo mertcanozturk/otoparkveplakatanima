@@ -11,12 +11,17 @@ using DevExpress.XtraEditors;
 
 namespace Otopark
 {
-   
+
     public partial class YeniAboneForm : DevExpress.XtraEditors.XtraForm
     {
         Classlar.Bildirim bildirim = new Classlar.Bildirim();
+        List<EntityLayer.AboneTip> aboneTips = new List<EntityLayer.AboneTip>();
         List<EntityLayer.Arac.AracTip> aracTips = new List<EntityLayer.Arac.AracTip>();
         BusinessLayer.Arac BsArac = new BusinessLayer.Arac();
+        BusinessLayer.Abone BsAbone = new BusinessLayer.Abone();
+        EntityLayer.Abone abone = new EntityLayer.Abone();
+        EntityLayer.AboneTip aboneTip = new EntityLayer.AboneTip();
+        EntityLayer.Arac.AracTip aracTip = new EntityLayer.Arac.AracTip();
         public YeniAboneForm()
         {
             InitializeComponent();
@@ -40,6 +45,49 @@ namespace Otopark
                 comboAracTipi.Properties.Items.Add(item.Adi);
             }
             comboAracTipi.SelectedIndex = 0;
+
+            aboneTips = BsAbone.aboneTipGetir();
+
+            foreach (var item in aboneTips)
+            {
+                comboAbonelikTipi.Properties.Items.Add(item.Adi);
+            }
+            comboAbonelikTipi.SelectedIndex = 0;
+
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            // ABONELİKTİPİ VE ARAÇTİPİ ÇEKİLECEK
+
+            int AbonelikTipiNo = 1;
+            int AracTipId = 1;
+
+            abone = new EntityLayer.Abone();
+            abone.Adi = txtAdi.Text;
+            abone.Plaka = txtPlaka.Text;
+            abone.Soyadi = txtSoyadi.Text;
+            abone.Telefon = txtTelefon.Text;
+            abone.AbonelikAdi = comboAbonelikTipi.Text;
+            abone.Adres = txtAdres.Text;
+            abone.AracTipAdi = comboAracTipi.Text;
+            abone.AracTipId = 1;
+            abone.AbonelikTipiNo = 1;
+            abone.BitisTarihi = DateTime.Now.AddDays(aboneTip.Sure);
+            abone.Fiyat = aboneTip.Ucret;
+            abone.GirisTarihi = DateTime.Now;
+            abone.KullaniciId = 1;
+
+            if (BsAbone.Kaydet(abone))
+            {
+                bildirim.Bilgi("Kayıt işlemi başarı ile gerçekleşti", "Bilgi");
+                this.Close();
+            }
+            else
+            {
+                bildirim.Uyari("Kayıt işlemi gerçekleşirken bir hata oluştu.", "Hata");
+            }
+
         }
     }
 }
