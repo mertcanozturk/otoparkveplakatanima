@@ -125,6 +125,7 @@
             this.colKullaniciId});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.RowHeight = 30;
             // 
@@ -451,7 +452,7 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Name = "AboneListesiForm";
-            this.Text = "AboneListesiForm";
+            this.Text = "Abone Listesi";
             this.Load += new System.EventHandler(this.AboneListesiForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);

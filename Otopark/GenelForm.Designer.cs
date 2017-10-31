@@ -107,7 +107,7 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl1.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
@@ -131,7 +131,7 @@
             // 
             // btnAracSayiDetay
             // 
-            this.btnAracSayiDetay.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAracSayiDetay.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAracSayiDetay.Appearance.Options.UseFont = true;
             this.btnAracSayiDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAracSayiDetay.ImageOptions.Image")));
             this.btnAracSayiDetay.Location = new System.Drawing.Point(28, 197);
@@ -144,100 +144,100 @@
             // lblAnlikTirSayisi
             // 
             this.lblAnlikTirSayisi.AutoSize = true;
-            this.lblAnlikTirSayisi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAnlikTirSayisi.Location = new System.Drawing.Point(179, 160);
+            this.lblAnlikTirSayisi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAnlikTirSayisi.Location = new System.Drawing.Point(174, 157);
             this.lblAnlikTirSayisi.Name = "lblAnlikTirSayisi";
-            this.lblAnlikTirSayisi.Size = new System.Drawing.Size(21, 23);
+            this.lblAnlikTirSayisi.Size = new System.Drawing.Size(19, 21);
             this.lblAnlikTirSayisi.TabIndex = 1;
             this.lblAnlikTirSayisi.Text = "0";
             // 
             // lblAnlikOtobüsSayisi
             // 
             this.lblAnlikOtobüsSayisi.AutoSize = true;
-            this.lblAnlikOtobüsSayisi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAnlikOtobüsSayisi.Location = new System.Drawing.Point(179, 134);
+            this.lblAnlikOtobüsSayisi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAnlikOtobüsSayisi.Location = new System.Drawing.Point(174, 131);
             this.lblAnlikOtobüsSayisi.Name = "lblAnlikOtobüsSayisi";
-            this.lblAnlikOtobüsSayisi.Size = new System.Drawing.Size(21, 23);
+            this.lblAnlikOtobüsSayisi.Size = new System.Drawing.Size(19, 21);
             this.lblAnlikOtobüsSayisi.TabIndex = 1;
             this.lblAnlikOtobüsSayisi.Text = "0";
             // 
             // lblAnlikMinibusSayisi
             // 
             this.lblAnlikMinibusSayisi.AutoSize = true;
-            this.lblAnlikMinibusSayisi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAnlikMinibusSayisi.Location = new System.Drawing.Point(179, 108);
+            this.lblAnlikMinibusSayisi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAnlikMinibusSayisi.Location = new System.Drawing.Point(174, 105);
             this.lblAnlikMinibusSayisi.Name = "lblAnlikMinibusSayisi";
-            this.lblAnlikMinibusSayisi.Size = new System.Drawing.Size(21, 23);
+            this.lblAnlikMinibusSayisi.Size = new System.Drawing.Size(19, 21);
             this.lblAnlikMinibusSayisi.TabIndex = 1;
             this.lblAnlikMinibusSayisi.Text = "0";
             // 
             // lblAnlikKamyonSayisi
             // 
             this.lblAnlikKamyonSayisi.AutoSize = true;
-            this.lblAnlikKamyonSayisi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAnlikKamyonSayisi.Location = new System.Drawing.Point(179, 82);
+            this.lblAnlikKamyonSayisi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAnlikKamyonSayisi.Location = new System.Drawing.Point(174, 79);
             this.lblAnlikKamyonSayisi.Name = "lblAnlikKamyonSayisi";
-            this.lblAnlikKamyonSayisi.Size = new System.Drawing.Size(21, 23);
+            this.lblAnlikKamyonSayisi.Size = new System.Drawing.Size(19, 21);
             this.lblAnlikKamyonSayisi.TabIndex = 1;
             this.lblAnlikKamyonSayisi.Text = "0";
             // 
             // lblAnlikOtomobilSayisi
             // 
             this.lblAnlikOtomobilSayisi.AutoSize = true;
-            this.lblAnlikOtomobilSayisi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAnlikOtomobilSayisi.Location = new System.Drawing.Point(179, 56);
+            this.lblAnlikOtomobilSayisi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAnlikOtomobilSayisi.Location = new System.Drawing.Point(174, 56);
             this.lblAnlikOtomobilSayisi.Name = "lblAnlikOtomobilSayisi";
-            this.lblAnlikOtomobilSayisi.Size = new System.Drawing.Size(21, 23);
+            this.lblAnlikOtomobilSayisi.Size = new System.Drawing.Size(19, 21);
             this.lblAnlikOtomobilSayisi.TabIndex = 1;
             this.lblAnlikOtomobilSayisi.Text = "0";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(80, 158);
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(80, 156);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 23);
+            this.label9.Size = new System.Drawing.Size(101, 21);
             this.label9.TabIndex = 0;
             this.label9.Text = "Tır Sayısı : ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(44, 132);
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(48, 130);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 23);
+            this.label7.Size = new System.Drawing.Size(133, 21);
             this.label7.TabIndex = 0;
             this.label7.Text = "Otobüs Sayısı : ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(36, 106);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(44, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 23);
+            this.label5.Size = new System.Drawing.Size(137, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "Minibüs Sayısı : ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(35, 80);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(41, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 23);
+            this.label3.Size = new System.Drawing.Size(140, 21);
             this.label3.TabIndex = 0;
             this.label3.Text = "Kamyon Sayısı : ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(24, 54);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(33, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 23);
+            this.label1.Size = new System.Drawing.Size(148, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Otomobil Sayısı : ";
             // 
@@ -262,7 +262,7 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
@@ -286,7 +286,7 @@
             // 
             // btnBugununVerileriDetay
             // 
-            this.btnBugununVerileriDetay.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBugununVerileriDetay.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBugununVerileriDetay.Appearance.Options.UseFont = true;
             this.btnBugununVerileriDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBugununVerileriDetay.ImageOptions.Image")));
             this.btnBugununVerileriDetay.Location = new System.Drawing.Point(28, 197);
@@ -298,100 +298,100 @@
             // lblGunlukTirSayisi
             // 
             this.lblGunlukTirSayisi.AutoSize = true;
-            this.lblGunlukTirSayisi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGunlukTirSayisi.Location = new System.Drawing.Point(179, 160);
+            this.lblGunlukTirSayisi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGunlukTirSayisi.Location = new System.Drawing.Point(174, 158);
             this.lblGunlukTirSayisi.Name = "lblGunlukTirSayisi";
-            this.lblGunlukTirSayisi.Size = new System.Drawing.Size(21, 23);
+            this.lblGunlukTirSayisi.Size = new System.Drawing.Size(19, 21);
             this.lblGunlukTirSayisi.TabIndex = 1;
             this.lblGunlukTirSayisi.Text = "0";
             // 
             // lblGunlukOtobusSayisi
             // 
             this.lblGunlukOtobusSayisi.AutoSize = true;
-            this.lblGunlukOtobusSayisi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGunlukOtobusSayisi.Location = new System.Drawing.Point(179, 134);
+            this.lblGunlukOtobusSayisi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGunlukOtobusSayisi.Location = new System.Drawing.Point(174, 132);
             this.lblGunlukOtobusSayisi.Name = "lblGunlukOtobusSayisi";
-            this.lblGunlukOtobusSayisi.Size = new System.Drawing.Size(21, 23);
+            this.lblGunlukOtobusSayisi.Size = new System.Drawing.Size(19, 21);
             this.lblGunlukOtobusSayisi.TabIndex = 1;
             this.lblGunlukOtobusSayisi.Text = "0";
             // 
             // lblMinibusSayisi
             // 
             this.lblMinibusSayisi.AutoSize = true;
-            this.lblMinibusSayisi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMinibusSayisi.Location = new System.Drawing.Point(179, 108);
+            this.lblMinibusSayisi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMinibusSayisi.Location = new System.Drawing.Point(174, 106);
             this.lblMinibusSayisi.Name = "lblMinibusSayisi";
-            this.lblMinibusSayisi.Size = new System.Drawing.Size(21, 23);
+            this.lblMinibusSayisi.Size = new System.Drawing.Size(19, 21);
             this.lblMinibusSayisi.TabIndex = 1;
             this.lblMinibusSayisi.Text = "0";
             // 
             // lblGunlukKamyonSayisi
             // 
             this.lblGunlukKamyonSayisi.AutoSize = true;
-            this.lblGunlukKamyonSayisi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGunlukKamyonSayisi.Location = new System.Drawing.Point(179, 82);
+            this.lblGunlukKamyonSayisi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGunlukKamyonSayisi.Location = new System.Drawing.Point(174, 80);
             this.lblGunlukKamyonSayisi.Name = "lblGunlukKamyonSayisi";
-            this.lblGunlukKamyonSayisi.Size = new System.Drawing.Size(21, 23);
+            this.lblGunlukKamyonSayisi.Size = new System.Drawing.Size(19, 21);
             this.lblGunlukKamyonSayisi.TabIndex = 1;
             this.lblGunlukKamyonSayisi.Text = "0";
             // 
             // lblGunlukOtomobilSayisi
             // 
             this.lblGunlukOtomobilSayisi.AutoSize = true;
-            this.lblGunlukOtomobilSayisi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGunlukOtomobilSayisi.Location = new System.Drawing.Point(179, 56);
+            this.lblGunlukOtomobilSayisi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGunlukOtomobilSayisi.Location = new System.Drawing.Point(174, 56);
             this.lblGunlukOtomobilSayisi.Name = "lblGunlukOtomobilSayisi";
-            this.lblGunlukOtomobilSayisi.Size = new System.Drawing.Size(21, 23);
+            this.lblGunlukOtomobilSayisi.Size = new System.Drawing.Size(19, 21);
             this.lblGunlukOtomobilSayisi.TabIndex = 1;
             this.lblGunlukOtomobilSayisi.Text = "0";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.Location = new System.Drawing.Point(80, 158);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(105, 23);
+            this.label16.Size = new System.Drawing.Size(101, 21);
             this.label16.TabIndex = 0;
             this.label16.Text = "Tır Sayısı : ";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label17.Location = new System.Drawing.Point(44, 132);
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label17.Location = new System.Drawing.Point(48, 132);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(141, 23);
+            this.label17.Size = new System.Drawing.Size(133, 21);
             this.label17.TabIndex = 0;
             this.label17.Text = "Otobüs Sayısı : ";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label18.Location = new System.Drawing.Point(36, 106);
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label18.Location = new System.Drawing.Point(44, 106);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(149, 23);
+            this.label18.Size = new System.Drawing.Size(137, 21);
             this.label18.TabIndex = 0;
             this.label18.Text = "Minibüs Sayısı : ";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label19.Location = new System.Drawing.Point(35, 80);
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label19.Location = new System.Drawing.Point(41, 80);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(150, 23);
+            this.label19.Size = new System.Drawing.Size(140, 21);
             this.label19.TabIndex = 0;
             this.label19.Text = "Kamyon Sayısı : ";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label20.Location = new System.Drawing.Point(24, 56);
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.Location = new System.Drawing.Point(33, 56);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(161, 23);
+            this.label20.Size = new System.Drawing.Size(148, 21);
             this.label20.TabIndex = 0;
             this.label20.Text = "Otomobil Sayısı : ";
             // 
@@ -420,7 +420,7 @@
             // 
             // groupControl5
             // 
-            this.groupControl5.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl5.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl5.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupControl5.AppearanceCaption.Options.UseFont = true;
             this.groupControl5.AppearanceCaption.Options.UseForeColor = true;
@@ -440,7 +440,7 @@
             // 
             // btnAboneArama
             // 
-            this.btnAboneArama.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAboneArama.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAboneArama.Appearance.Options.UseFont = true;
             this.btnAboneArama.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAboneArama.ImageOptions.Image")));
             this.btnAboneArama.Location = new System.Drawing.Point(28, 269);
@@ -463,20 +463,20 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label33.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label33.Location = new System.Drawing.Point(24, 125);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(56, 23);
+            this.label33.Size = new System.Drawing.Size(50, 21);
             this.label33.TabIndex = 0;
             this.label33.Text = "Plaka";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label42.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label42.Location = new System.Drawing.Point(24, 54);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(98, 23);
+            this.label42.Size = new System.Drawing.Size(93, 21);
             this.label42.TabIndex = 0;
             this.label42.Text = "Abone Adı";
             // 
@@ -509,7 +509,7 @@
             // 
             // groupControl4
             // 
-            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl4.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupControl4.AppearanceCaption.Options.UseFont = true;
             this.groupControl4.AppearanceCaption.Options.UseForeColor = true;
@@ -525,7 +525,7 @@
             // 
             // btnPlakaArama
             // 
-            this.btnPlakaArama.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPlakaArama.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPlakaArama.Appearance.Options.UseFont = true;
             this.btnPlakaArama.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlakaArama.ImageOptions.Image")));
             this.btnPlakaArama.Location = new System.Drawing.Point(28, 132);
@@ -538,10 +538,10 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label24.Location = new System.Drawing.Point(24, 54);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(56, 23);
+            this.label24.Size = new System.Drawing.Size(50, 21);
             this.label24.TabIndex = 5;
             this.label24.Text = "Plaka";
             // 
@@ -565,7 +565,7 @@
             // 
             // groupControl3
             // 
-            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupControl3.AppearanceCaption.Options.UseFont = true;
             this.groupControl3.AppearanceCaption.Options.UseForeColor = true;

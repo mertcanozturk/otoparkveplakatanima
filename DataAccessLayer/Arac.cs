@@ -62,7 +62,17 @@ namespace DataAccessLayer
                 return dt;
             return null;
         }
-
+        public int AracTipIdGetir(string AracTipAdi)
+        {
+            string sorgu = string.Format("SELECT * FROM TBLARACTIP WHERE ARACTIPADI=@ARACTIPADI");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@ARACTIPADI", SqlDbType.VarChar);
+            sqlParameters[0].Value = AracTipAdi;
+            DataTable dt = baglanti.executeSelectQuery(sorgu, sqlParameters);
+            if (dt.Rows.Count > 0)
+                return Convert.ToInt32(dt.Rows[0][0]);
+            return 0;
+        }
         public DataTable AracTipGetir()
         {
             string sorgu = string.Format("SELECT * FROM TBLARACTIP");

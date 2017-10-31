@@ -58,11 +58,7 @@ namespace Otopark
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            // ABONELİKTİPİ VE ARAÇTİPİ ÇEKİLECEK
-
-            int AbonelikTipiNo = 1;
-            int AracTipId = 1;
-
+            
             abone = new EntityLayer.Abone();
             abone.Adi = txtAdi.Text;
             abone.Plaka = txtPlaka.Text;
@@ -71,9 +67,10 @@ namespace Otopark
             abone.AbonelikAdi = comboAbonelikTipi.Text;
             abone.Adres = txtAdres.Text;
             abone.AracTipAdi = comboAracTipi.Text;
-            abone.AracTipId = 1;
-            abone.AbonelikTipiNo = 1;
-            abone.BitisTarihi = DateTime.Now.AddDays(aboneTip.Sure);
+            abone.AracTipId = BsArac.AracTipIdGetir(abone.AracTipAdi);
+            aboneTip = BsAbone.aboneTipGetir(abone.AbonelikAdi);
+            abone.AbonelikTipiNo = BsAbone.AbonelikTipiIdGetir(abone.AbonelikAdi);
+            abone.BitisTarihi = DateTime.Now.AddDays(aboneTip.Sure);// abonetip doldurup getir
             abone.Fiyat = aboneTip.Ucret;
             abone.GirisTarihi = DateTime.Now;
             abone.KullaniciId = 1;

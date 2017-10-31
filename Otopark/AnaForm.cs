@@ -66,9 +66,12 @@ namespace Otopark
 
         private void btnAboneListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            AboneListesiForm frm = new AboneListesiForm();
-            frm.MdiParent = this;
-            frm.Show();
+            if (Application.OpenForms["AboneListesiForm"] == null)
+            {
+                AboneListesiForm frm = new AboneListesiForm();
+                frm.MdiParent = this;
+                frm.Show();
+            }
         }
 
         private void btnCikis_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -20,30 +20,40 @@ namespace DataAccessLayer
 
         public bool AboneEkle(EntityLayer.Abone abone)
         {
-            string query = "INSERT INTO TBLABONE (ADI,SOYADI,ADRES,TELEFON,PLAKA,ARACTIPNO,GIRISTARIH,BITISTARIHI,ABONELIKTIPINO,KULLANICIID) VALUES(@ADI,@SOYADI,@ADRES,@TELEFON,@PLAKA,@ARACTIPNO,@GIRISTARIH,@BITISTARIHI,@ABONELIKTIPINO,@BITISTARIHI,@KULLANICIID)";
-            SqlParameter[] parameter = new SqlParameter[10];
-            parameter[0] = new SqlParameter("@ADI", SqlDbType.VarChar);
-            parameter[0].Value = abone.Adi;
-            parameter[1] = new SqlParameter("@SOYADI", SqlDbType.VarChar);
-            parameter[1].Value = abone.Soyadi;
-            parameter[2] = new SqlParameter("@ADRES", SqlDbType.VarChar);
-            parameter[2].Value = abone.Adres;
-            parameter[3] = new SqlParameter("@TELEFON", SqlDbType.VarChar);
-            parameter[3].Value = abone.Telefon;
-            parameter[4] = new SqlParameter("@PLAKA", SqlDbType.VarChar);
-            parameter[4].Value = abone.Plaka;
-            parameter[5] = new SqlParameter("@ARACTIPNO", SqlDbType.VarChar);
-            parameter[5].Value = abone.AracTipId;
-            parameter[6] = new SqlParameter("@GIRISTARIH", SqlDbType.VarChar);
-            parameter[6].Value = abone.GirisTarihi;
-            parameter[7] = new SqlParameter("@BITISTARIHI", SqlDbType.VarChar);
-            parameter[7].Value = abone.BitisTarihi;
-            parameter[8] = new SqlParameter("@ABONELIKTIPINO", SqlDbType.VarChar);
-            parameter[8].Value = abone.AbonelikTipiNo;
-            parameter[9] = new SqlParameter("@KULLANICIID", SqlDbType.VarChar);
-            parameter[9].Value = abone.KullaniciId;
-            baglanti.executeInsertQuery(query, parameter);
-            return true;
+            try
+            {
+                string query = "INSERT INTO TBLABONE (ADI,SOYADI,ADRES,TELEFON,PLAKA,ARACTIPNO,GIRISTARIH,BITISTARIHI,ABONELIKTIPINO,KULLANICIID) VALUES(@ADI,@SOYADI,@ADRES,@TELEFON,@PLAKA,@ARACTIPNO,@GIRISTARIH,@BITISTARIHI,@ABONELIKTIPINO,@KULLANICIID)";
+                SqlParameter[] parameter = new SqlParameter[10];
+                parameter[0] = new SqlParameter("@ADI", SqlDbType.VarChar);
+                parameter[0].Value = abone.Adi;
+                parameter[1] = new SqlParameter("@SOYADI", SqlDbType.VarChar);
+                parameter[1].Value = abone.Soyadi;
+                parameter[2] = new SqlParameter("@ADRES", SqlDbType.VarChar);
+                parameter[2].Value = abone.Adres;
+                parameter[3] = new SqlParameter("@TELEFON", SqlDbType.VarChar);
+                parameter[3].Value = abone.Telefon;
+                parameter[4] = new SqlParameter("@PLAKA", SqlDbType.VarChar);
+                parameter[4].Value = abone.Plaka;
+                parameter[5] = new SqlParameter("@ARACTIPNO", SqlDbType.VarChar);
+                parameter[5].Value = abone.AracTipId;
+                parameter[6] = new SqlParameter("@GIRISTARIH", SqlDbType.DateTime);
+                parameter[6].Value = abone.GirisTarihi;
+                parameter[7] = new SqlParameter("@BITISTARIHI", SqlDbType.DateTime);
+                parameter[7].Value = abone.BitisTarihi;
+                parameter[8] = new SqlParameter("@ABONELIKTIPINO", SqlDbType.Int);
+                parameter[8].Value = abone.AbonelikTipiNo;
+                parameter[9] = new SqlParameter("@KULLANICIID", SqlDbType.Int);
+                parameter[9].Value = abone.KullaniciId;
+                baglanti.executeInsertQuery(query, parameter);
+                return true;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+           
+           
         }
 
         public DataTable Listele()
@@ -73,7 +83,35 @@ namespace DataAccessLayer
             }
             return aboneTips;
         }
+        public int AbonelikTipiIdGetir(string aboneTipAdi)
+        {
+            string sorgu = string.Format("SELECT * FROM TBLABONELIKTIPI WHERE ABONELIKADI=@ABONELIKADI");
+            SqlParameter[] parameter = new SqlParameter[1];
+            parameter[0] = new SqlParameter("@ABONELIKADI", SqlDbType.VarChar);
+            parameter[0].Value = aboneTipAdi;
+            DataTable dt = baglanti.executeSelectQuery(sorgu, parameter);
+            if (dt.Rows.Count > 0)
+                return Convert.ToInt32(dt.Rows[0][0]);
+            return 0;
+        }
+        public EntityLayer.AboneTip AboneTipGetir(string aboneTipAdi)
+        {
+            EntityLayer.AboneTip aboneTip = new EntityLayer.AboneTip();
+            string sorgu = string.Format("SELECT * FROM TBLABONELIKTIPI WHERE ABONELIKADI=@ABONELIKADI");
+            SqlParameter[] parameter = new SqlParameter[1];
+            parameter[0] = new SqlParameter("@ABONELIKADI", SqlDbType.VarChar);
+            parameter[0].Value = aboneTipAdi;
+            DataTable dt = baglanti.executeSelectQuery(sorgu, parameter);
+            if (dt.Rows.Count > 0)
+            {
+                aboneTip.Id = Convert.ToInt32(dt.Rows[0][0]);
+                aboneTip.Adi = dt.Rows[0][1].ToString();
+                aboneTip.Sure = Convert.ToInt32(dt.Rows[0][2]);
+                aboneTip.Ucret = Convert.ToDecimal(dt.Rows[0][3]);
+            }
+            return aboneTip;
 
+        }
         public DataTable Listele(string Plaka, string Adi, string Soyadi, string aracTipi, string Telefon)
         {
             string sorgu = string.Format("SELECT * FROM VABONE WHERE ADI LIKE '%' + @ADI + '%' AND SOYADI LIKE '%' + @SOYADI + '%' AND PLAKA LIKE '%' + @PLAKA + '%' AND ARACTIPADI LIKE '%' + @ARACTIPADI + '%' AND TELEFON LIKE '%' + @TELEFON + '%'");

@@ -71,6 +71,14 @@ namespace BusinessLayer
             }
         }
 
+        public int AbonelikTipiIdGetir(string AbonelikAdi)
+        {
+            return aboneControl.AbonelikTipiIdGetir(AbonelikAdi);
+        }
+        public EntityLayer.AboneTip aboneTipGetir(string aboneTipAdi)
+        {
+            return aboneControl.AboneTipGetir(aboneTipAdi);
+        }
         public List<EntityLayer.AboneTip> aboneTipGetir()
         {
            return aboneControl.AboneTipListesiGetir();

@@ -83,6 +83,10 @@ namespace BusinessLayer
             }
             return aracTips;
         }
+        public int AracTipIdGetir(string AracTipAdi)
+        {
+            return _arac.AracTipIdGetir(AracTipAdi);
+        }
        
     }
 }
