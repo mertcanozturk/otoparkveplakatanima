@@ -57,5 +57,12 @@ namespace Otopark
         {
 
         }
+
+
+
+        private void yenileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listele();
+        }
     }
 }

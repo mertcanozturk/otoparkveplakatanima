@@ -321,6 +321,7 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "AracGirisForm";
             this.Text = "Araç Giriş Çıkış";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AracGirisForm_FormClosed);
             this.Load += new System.EventHandler(this.AracGirisForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

@@ -83,6 +83,8 @@
             this.ABONEMI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GIRISTARIHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.KONTAK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.yenileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -103,6 +105,7 @@
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -405,7 +408,7 @@
             this.panel3.Controls.Add(this.groupControl5);
             this.panel3.Controls.Add(this.groupControl4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(883, 0);
+            this.panel3.Location = new System.Drawing.Point(1075, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(287, 558);
             this.panel3.TabIndex = 3;
@@ -560,7 +563,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(282, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(601, 558);
+            this.panel4.Size = new System.Drawing.Size(793, 558);
             this.panel4.TabIndex = 1;
             // 
             // groupControl3
@@ -576,18 +579,19 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(601, 558);
+            this.groupControl3.Size = new System.Drawing.Size(793, 558);
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "   Otoparka Giren Son Araçlar ";
             // 
             // gridControl1
             // 
+            this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
             this.gridControl1.DataSource = this.aracBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(2, 39);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(597, 517);
+            this.gridControl1.Size = new System.Drawing.Size(789, 517);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -629,6 +633,7 @@
             this.PLAKA.Name = "PLAKA";
             this.PLAKA.Visible = true;
             this.PLAKA.VisibleIndex = 0;
+            this.PLAKA.Width = 192;
             // 
             // ARACTIPADI
             // 
@@ -641,6 +646,7 @@
             this.ARACTIPADI.Name = "ARACTIPADI";
             this.ARACTIPADI.Visible = true;
             this.ARACTIPADI.VisibleIndex = 1;
+            this.ARACTIPADI.Width = 179;
             // 
             // ARACTIPNO
             // 
@@ -670,7 +676,8 @@
             this.ABONEMI.FieldName = "AboneMi";
             this.ABONEMI.Name = "ABONEMI";
             this.ABONEMI.Visible = true;
-            this.ABONEMI.VisibleIndex = 2;
+            this.ABONEMI.VisibleIndex = 3;
+            this.ABONEMI.Width = 82;
             // 
             // GIRISTARIHI
             // 
@@ -679,10 +686,13 @@
             this.GIRISTARIHI.AppearanceHeader.Options.UseTextOptions = true;
             this.GIRISTARIHI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.GIRISTARIHI.Caption = "Giriş Tarihi";
+            this.GIRISTARIHI.DisplayFormat.FormatString = "f";
+            this.GIRISTARIHI.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.GIRISTARIHI.FieldName = "GirisTarihi";
             this.GIRISTARIHI.Name = "GIRISTARIHI";
             this.GIRISTARIHI.Visible = true;
-            this.GIRISTARIHI.VisibleIndex = 3;
+            this.GIRISTARIHI.VisibleIndex = 2;
+            this.GIRISTARIHI.Width = 281;
             // 
             // KONTAK
             // 
@@ -695,12 +705,27 @@
             this.KONTAK.Name = "KONTAK";
             this.KONTAK.Visible = true;
             this.KONTAK.VisibleIndex = 4;
+            this.KONTAK.Width = 39;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.yenileToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
+            // 
+            // yenileToolStripMenuItem
+            // 
+            this.yenileToolStripMenuItem.Name = "yenileToolStripMenuItem";
+            this.yenileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.yenileToolStripMenuItem.Text = "Yenile";
+            this.yenileToolStripMenuItem.Click += new System.EventHandler(this.yenileToolStripMenuItem_Click);
             // 
             // GenelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1170, 558);
+            this.ClientSize = new System.Drawing.Size(1362, 558);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -733,6 +758,7 @@
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -792,5 +818,7 @@
         private DevExpress.XtraEditors.TextEdit txtAracPlaka;
         private System.Windows.Forms.Label label23;
         private DevExpress.XtraEditors.TextEdit textEdit3;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem yenileToolStripMenuItem;
     }
 }

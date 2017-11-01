@@ -10,6 +10,7 @@ namespace DataAccessLayer
 {
     public class dbConnection
     {
+        
         private SqlConnection baglanti;
         private SqlDataAdapter komut;
         public dbConnection()

@@ -133,6 +133,16 @@ namespace Otopark.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_ico {
+            get {
+                object obj = ResourceManager.GetObject("new-ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap no_cam {
             get {
                 object obj = ResourceManager.GetObject("no-cam", resourceCulture);
@@ -206,6 +216,16 @@ namespace Otopark.Properties {
         internal static System.Drawing.Bitmap Safe_Box_32 {
             get {
                 object obj = ResourceManager.GetObject("Safe_Box-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap static1_squarespace {
+            get {
+                object obj = ResourceManager.GetObject("static1.squarespace", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

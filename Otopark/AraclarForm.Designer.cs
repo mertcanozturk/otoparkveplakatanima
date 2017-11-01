@@ -303,56 +303,95 @@
             // 
             // colId
             // 
+            this.colId.AppearanceCell.Options.UseTextOptions = true;
+            this.colId.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             // 
             // PLAKA
             // 
+            this.PLAKA.AppearanceCell.Options.UseTextOptions = true;
+            this.PLAKA.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PLAKA.AppearanceHeader.Options.UseTextOptions = true;
+            this.PLAKA.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PLAKA.FieldName = "PLAKA";
             this.PLAKA.Name = "PLAKA";
             this.PLAKA.Visible = true;
             this.PLAKA.VisibleIndex = 0;
+            this.PLAKA.Width = 196;
             // 
             // ARACTIPADI
             // 
+            this.ARACTIPADI.AppearanceCell.Options.UseTextOptions = true;
+            this.ARACTIPADI.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ARACTIPADI.AppearanceHeader.Options.UseTextOptions = true;
+            this.ARACTIPADI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.ARACTIPADI.FieldName = "ARACTIPADI";
             this.ARACTIPADI.Name = "ARACTIPADI";
             this.ARACTIPADI.Visible = true;
-            this.ARACTIPADI.VisibleIndex = 2;
+            this.ARACTIPADI.VisibleIndex = 1;
+            this.ARACTIPADI.Width = 196;
             // 
             // colAracTipNo
             // 
+            this.colAracTipNo.AppearanceCell.Options.UseTextOptions = true;
+            this.colAracTipNo.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAracTipNo.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAracTipNo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colAracTipNo.FieldName = "AracTipNo";
             this.colAracTipNo.Name = "colAracTipNo";
             // 
             // colAboneNo
             // 
+            this.colAboneNo.AppearanceCell.Options.UseTextOptions = true;
+            this.colAboneNo.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAboneNo.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAboneNo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colAboneNo.FieldName = "AboneNo";
             this.colAboneNo.Name = "colAboneNo";
             // 
             // ABONEMI
             // 
+            this.ABONEMI.AppearanceCell.Options.UseTextOptions = true;
+            this.ABONEMI.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ABONEMI.AppearanceHeader.Options.UseTextOptions = true;
+            this.ABONEMI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.ABONEMI.FieldName = "ABONEMI";
             this.ABONEMI.Name = "ABONEMI";
             this.ABONEMI.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;
             this.ABONEMI.Visible = true;
-            this.ABONEMI.VisibleIndex = 3;
+            this.ABONEMI.VisibleIndex = 4;
+            this.ABONEMI.Width = 137;
             // 
             // GIRISTARIHI
             // 
+            this.GIRISTARIHI.AppearanceCell.Options.UseTextOptions = true;
+            this.GIRISTARIHI.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.GIRISTARIHI.AppearanceHeader.Options.UseTextOptions = true;
+            this.GIRISTARIHI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.GIRISTARIHI.DisplayFormat.FormatString = "f";
+            this.GIRISTARIHI.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.GIRISTARIHI.FieldName = "GIRISTARIHI";
             this.GIRISTARIHI.Name = "GIRISTARIHI";
             this.GIRISTARIHI.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
             this.GIRISTARIHI.Visible = true;
-            this.GIRISTARIHI.VisibleIndex = 4;
+            this.GIRISTARIHI.VisibleIndex = 2;
+            this.GIRISTARIHI.Width = 332;
             // 
             // KONTAK
             // 
+            this.KONTAK.AppearanceCell.Options.UseTextOptions = true;
+            this.KONTAK.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.KONTAK.AppearanceHeader.Options.UseTextOptions = true;
+            this.KONTAK.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.KONTAK.FieldName = "KONTAK";
             this.KONTAK.Name = "KONTAK";
             this.KONTAK.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;
             this.KONTAK.Visible = true;
-            this.KONTAK.VisibleIndex = 1;
+            this.KONTAK.VisibleIndex = 3;
+            this.KONTAK.Width = 120;
             // 
             // AraclarForm
             // 

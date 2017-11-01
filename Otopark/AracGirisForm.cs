@@ -31,7 +31,7 @@ namespace Otopark
         BusinessLayer.Arac BsArac = new BusinessLayer.Arac();
         BusinessLayer.Otopark Bsotopark = new BusinessLayer.Otopark();
         BusinessLayer.Satis BsSatis = new BusinessLayer.Satis();
-
+        BusinessLayer.Kasa kasa = new BusinessLayer.Kasa();
         List<EntityLayer.Arac.AracTip> aracTips = new List<EntityLayer.Arac.AracTip>();
 
         Classlar.Bildirim mesaj = new Classlar.Bildirim();
@@ -344,6 +344,9 @@ namespace Otopark
 
         private void BtnCikisYap_Click(object sender, EventArgs e)
         {
+            satis = new EntityLayer.Satis();
+            otoparkAraci = new EntityLayer.Otopark.Arac();
+
             string plaka = txtPlaka.Text;
             if (!Bsotopark.aracOtoparktaMi(plaka.Trim()))
                 mesaj.Uyari("Araç otoparkta değil!", "Uyarı");
@@ -366,6 +369,8 @@ namespace Otopark
                             mesaj.Bilgi("Araç çıkışı yapıldı.", "Bilgi");
                         else
                             mesaj.Hata("Silerken hata oluştu.", "Hata");
+                        if (kasa.ParaEkle(satis.Ucret)) { }
+                        else mesaj.Hata("Kasaya para eklenirken hata oluştu","Hata");                     
                     }
                     else
                         mesaj.Hata("Satışı kaydederken hata oluştu.", "Hata");
@@ -373,6 +378,14 @@ namespace Otopark
                     mesaj.Bilgi("İptal edildi.", "Bilgi");
             }
 
+        }
+
+        private void AracGirisForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _webCamera.Dispose();
+            _liveProvider.Dispose();
+
+            
         }
     }
 

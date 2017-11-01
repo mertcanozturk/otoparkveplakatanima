@@ -20,7 +20,7 @@ namespace Otopark
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            Application.Run(new AnaForm());
+            Application.Run(new KullaniciGirisForm());
         }
     }
 }

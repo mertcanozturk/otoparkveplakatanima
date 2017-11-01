@@ -16,16 +16,24 @@ namespace Otopark
         {
             InitializeComponent();
         }
+        public bool aracDurumu = true;
+        public Timer timer4 = new Timer();
 
         private void AnaForm_Load(object sender, EventArgs e)
         {
+            serialPort1.Open();
             GenelForm frm = new GenelForm();
             frm.MdiParent = this;
             frm.Show();
             timer1.Interval = 1000;
             timer1.Start();
-
+            timer2.Start();
+            timer3.Start();
             barTarih.Caption = "Tarih: " + DateTime.Now;
+        }
+        ~AnaForm()
+        {
+            serialPort1.Close();
         }
 
         private void btnAracGiris_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -42,6 +50,8 @@ namespace Otopark
         private void timer1_Tick(object sender, EventArgs e)
         {
             barTarih.Caption = "Tarih: " + DateTime.Now;
+          
+
         }
 
         private void btnSatislar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -84,15 +94,51 @@ namespace Otopark
             if (!bildirim.Soru("Çıkmak istiyor musunuz?", "Soru"))
             {
                 e.Cancel = true;
-                Application.Exit();
             }
         }
 
         private void btnOtopark_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            GenelForm frm = new GenelForm();
-            frm.MdiParent = this;
-            frm.Show();
+            if (Application.OpenForms["GenelForm"] == null)
+            {
+                GenelForm frm = new GenelForm();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+        int oncekiMesafe = 0;
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                int aracMesafesi = int.Parse(serialPort1.ReadLine());
+                Console.WriteLine(aracMesafesi);
+              
+                if (aracMesafesi < 30 && aracMesafesi!=0 && oncekiMesafe >= 30)
+                {   
+                    timer2.Stop();
+                    if (Application.OpenForms["AracGirisForm"] == null)
+                    {
+                        AracGirisForm f = new AracGirisForm();
+                        f.MdiParent = this;
+                        f.Show();
+                        
+                    }
+                }
+                oncekiMesafe = aracMesafesi;
+            }
+            catch (Exception)
+            {
+            }
+
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["AracGirisForm"] == null)
+            {
+                timer2.Start();
+            }
         }
     }
 }

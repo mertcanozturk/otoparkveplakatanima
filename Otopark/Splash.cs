@@ -11,6 +11,7 @@ namespace Otopark
 {
     public partial class Splash : SplashScreen
     {
+        
         public Splash()
         {
             InitializeComponent();
