@@ -8,6 +8,7 @@ namespace EntityLayer
 {
     public class Arac
     {
+        // STRUCT OLARAK TANIMLA
         public string Plaka { get; set; }
         public string AracTipAdi { get; set; }
         public decimal Fiyat { get; set; }
@@ -17,7 +18,7 @@ namespace EntityLayer
         public bool AboneMi { get; set; }
 
 
-        public class AboneTip
+        public struct AboneTip
         {
             public int Id { get; set; }
             public string Adi { get; set; }

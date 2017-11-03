@@ -114,7 +114,7 @@ namespace Otopark
                 int aracMesafesi = int.Parse(serialPort1.ReadLine());
                 Console.WriteLine(aracMesafesi);
               
-                if (aracMesafesi < 30 && aracMesafesi!=0 && oncekiMesafe >= 30)
+                if (aracMesafesi < 40 && aracMesafesi!=0 && oncekiMesafe >= 40)
                 {   
                     timer2.Stop();
                     if (Application.OpenForms["AracGirisForm"] == null)

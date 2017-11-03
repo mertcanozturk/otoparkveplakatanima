@@ -331,7 +331,7 @@
             // 
             // serialPort1
             // 
-            this.serialPort1.PortName = "COM7";
+            this.serialPort1.PortName = "COM8";
             // 
             // timer2
             // 
@@ -340,7 +340,7 @@
             // 
             // timer3
             // 
-            this.timer3.Interval = 3000;
+            this.timer3.Interval = 500;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // AnaForm

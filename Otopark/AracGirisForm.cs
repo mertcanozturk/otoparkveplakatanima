@@ -124,6 +124,7 @@ namespace Otopark
             {
                 string plaka = txtPlaka.Text;
                 plaka = plaka.Trim();
+                
                 if (plaka.Length == 7 || plaka.Length == 8)
                 {
 
@@ -165,9 +166,9 @@ namespace Otopark
                         btnGirisiOnayla.Enabled = true;
                     }
                     oncekiPlaka = plaka;
+                   
 
-
-                }
+                } 
             }
             catch (Exception e)
             {
@@ -194,7 +195,12 @@ namespace Otopark
                 otoparkAraci.AboneNo = AboneMi ? abone.Id : 0;
                 otoparkAraci.AboneMi = AboneMi;
                 if (Bsotopark.aracKaydet(otoparkAraci))
+                {
                     mesaj.Bilgi("Araç otoparka başarıyla giriş yaptı.", "Bilgi");
+                    this.Close();
+                }
+                   
+
                 else
                     mesaj.Uyari("Kaydederken veritabanında bir hata oluştu", "Uyarı");
             }
@@ -234,8 +240,6 @@ namespace Otopark
 
                 try
                 {
-
-
                     string plaka = plakalar[0];
                     plaka = plaka.Trim();
                     if (plaka.Length == 7 || plaka.Length == 8)
