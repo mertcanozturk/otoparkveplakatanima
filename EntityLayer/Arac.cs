@@ -8,7 +8,7 @@ namespace EntityLayer
 {
     public class Arac
     {
-        // STRUCT OLARAK TANIMLA
+        public int Id { get; set; }
         public string Plaka { get; set; }
         public string AracTipAdi { get; set; }
         public decimal Fiyat { get; set; }

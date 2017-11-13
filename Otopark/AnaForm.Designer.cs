@@ -127,6 +127,7 @@
             this.btnAracTipleri.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAracTipleri.ImageOptions.Image")));
             this.btnAracTipleri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAracTipleri.ImageOptions.LargeImage")));
             this.btnAracTipleri.Name = "btnAracTipleri";
+            this.btnAracTipleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAracTipleri_ItemClick);
             // 
             // ribbonPageGroup2
             // 
@@ -158,6 +159,7 @@
             this.btnAbonelikTipleri.Id = 10;
             this.btnAbonelikTipleri.ImageOptions.LargeImage = global::Otopark.Properties.Resources.substip_48;
             this.btnAbonelikTipleri.Name = "btnAbonelikTipleri";
+            this.btnAbonelikTipleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAbonelikTipleri_ItemClick);
             // 
             // ribbonPageGroup5
             // 

@@ -26,15 +26,16 @@ namespace DataAccessLayer
             DataTable dt = baglanti.executeSelectQuery(sorgu, null);
             if (dt.Rows.Count > 0)
             {
-                this.para = Convert.ToInt64(dt.Rows[0][0]);
+                this.para = Convert.ToDecimal(dt.Rows[0][0]);
             }
         }
 
         public bool ParaEkle(decimal miktar)
         {
+            parayiAl();
             string sorgu = string.Format("UPDATE TBLKASA SET PARA=@PARA");
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@PARA", SqlDbType.VarChar);
+            sqlParameters[0] = new SqlParameter("@PARA", SqlDbType.Decimal);
             sqlParameters[0].Value = this.para+miktar;
             if (baglanti.executeUpdateQuery(sorgu, sqlParameters))
                 return true;

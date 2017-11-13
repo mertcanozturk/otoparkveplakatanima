@@ -154,6 +154,12 @@
     <Compile Include="AraclarForm.Designer.cs">
       <DependentUpon>AraclarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AracTipleriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracTipleriForm.Designer.cs">
+      <DependentUpon>AracTipleriForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classlar\AracCikis.cs" />
     <Compile Include="Classlar\AracGiris.cs" />
     <Compile Include="Classlar\Bildirim.cs" />
@@ -201,6 +207,9 @@
     <EmbeddedResource Include="AraclarForm.resx">
       <DependentUpon>AraclarForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AracTipleriForm.resx">
+      <DependentUpon>AracTipleriForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GenelForm.resx">
       <DependentUpon>GenelForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +236,7 @@
     <None Include="app.config" />
     <None Include="EntityLayer.Abone.datasource" />
     <None Include="EntityLayer.AboneTip.datasource" />
+    <None Include="EntityLayer.Arac+AracTip.datasource" />
     <None Include="EntityLayer.Otopark+Arac.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

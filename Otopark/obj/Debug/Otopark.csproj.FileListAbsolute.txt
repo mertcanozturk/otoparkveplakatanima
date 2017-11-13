@@ -420,3 +420,4 @@ C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\bin\Debug\ja\DevExpress.Xtr
 C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\bin\Debug\ru\DevExpress.XtraGauges.v17.1.Presets.resources.dll
 C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\obj\Debug\Otopark.GenelForm.resources
 C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\obj\Debug\Otopark.AbonelikTipleriForm.resources
+C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\obj\Debug\Otopark.AracTipleriForm.resources

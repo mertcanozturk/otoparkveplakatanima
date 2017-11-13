@@ -55,41 +55,45 @@ namespace Otopark
 
         private void menuSonlandir_Click(object sender, EventArgs e)
         {
-            foreach (int i in gridView1.GetSelectedRows())
+            satis = new EntityLayer.Satis();
+            EntityLayer.Otopark.Arac otoparkAraci = new EntityLayer.Otopark.Arac();
+            Classlar.AracCikis aracCikisControl = new Classlar.AracCikis();
+            BusinessLayer.Kasa kasa = new BusinessLayer.Kasa();
+            string plaka = Convert.ToString(gridView1.GetFocusedRowCellValue("PLAKA"));
+            if (!Bsotopark.aracOtoparktaMi(plaka.Trim()))
+                bildirim.Uyari("Araç otoparkta değil!", "Uyarı");
+            else
             {
-                //row[0]= PLAKA
-                DataRow row = gridView1.GetDataRow(i);
-                DataRow OtoparkAraci = Bsotopark.AracGetir(row[0].ToString());
-                
+                DataRow OtoparkAraci = Bsotopark.AracGetir(plaka.Trim());
                 satis.AracTipNo = Convert.ToInt32(OtoparkAraci[2]);
                 satis.Plaka = OtoparkAraci[1].ToString();
                 satis.AboneNo = Convert.ToInt32(OtoparkAraci[3].ToString());
                 satis.GirisTarihi = Convert.ToDateTime(OtoparkAraci[4]);
                 satis.Kontak = Convert.ToBoolean(OtoparkAraci[5]);
-                satis.Ucret = control.UcretHesapla(satis.AracTipNo, satis.GirisTarihi);
+                satis.Ucret = aracCikisControl.UcretHesapla(satis.AracTipNo, satis.GirisTarihi);
                 satis.CikisTarihi = DateTime.Now;
                 satis.KullaniciId = 1;
 
                 if (bildirim.Soru("Araç otoparktan silinsin mi?", "Araç Çıkış"))
                     if (BsSatis.Kaydet(satis))
                     {
-                        if (Bsotopark.aracSil(row[0].ToString()))
+                        if (Bsotopark.aracSil(plaka.Trim()))
                             bildirim.Bilgi("Araç çıkışı yapıldı.", "Bilgi");
                         else
                             bildirim.Hata("Silerken hata oluştu.", "Hata");
+                        if (kasa.ParaEkle(satis.Ucret)) { }
+                        else bildirim.Hata("Kasaya para eklenirken hata oluştu", "Hata");
                     }
                     else
                         bildirim.Hata("Satışı kaydederken hata oluştu.", "Hata");
                 else
                     bildirim.Bilgi("İptal edildi.", "Bilgi");
-
-                Listele();
             }
         }
 
         private void menuDuzenle_Click(object sender, EventArgs e)
         {
-            DateTime dt = Convert.ToDateTime("2017 - 10 - 27 10:02:17.000");
+            DateTime dt = Convert.ToDateTime( gridView1.GetFocusedRowCellValue("GIRISTARIHI"));
             decimal a = control.UcretHesapla(1, dt);
             MessageBox.Show(a.ToString());
         }

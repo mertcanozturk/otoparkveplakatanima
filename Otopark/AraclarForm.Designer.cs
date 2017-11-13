@@ -316,6 +316,7 @@
             this.PLAKA.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PLAKA.AppearanceHeader.Options.UseTextOptions = true;
             this.PLAKA.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PLAKA.Caption = "Plaka";
             this.PLAKA.FieldName = "PLAKA";
             this.PLAKA.Name = "PLAKA";
             this.PLAKA.Visible = true;
@@ -328,6 +329,7 @@
             this.ARACTIPADI.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.ARACTIPADI.AppearanceHeader.Options.UseTextOptions = true;
             this.ARACTIPADI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ARACTIPADI.Caption = "Araç Tip Adı";
             this.ARACTIPADI.FieldName = "ARACTIPADI";
             this.ARACTIPADI.Name = "ARACTIPADI";
             this.ARACTIPADI.Visible = true;
@@ -358,6 +360,7 @@
             this.ABONEMI.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.ABONEMI.AppearanceHeader.Options.UseTextOptions = true;
             this.ABONEMI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ABONEMI.Caption = "Abone Mi ?";
             this.ABONEMI.FieldName = "ABONEMI";
             this.ABONEMI.Name = "ABONEMI";
             this.ABONEMI.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;
@@ -371,6 +374,7 @@
             this.GIRISTARIHI.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.GIRISTARIHI.AppearanceHeader.Options.UseTextOptions = true;
             this.GIRISTARIHI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.GIRISTARIHI.Caption = "Giriş Tarihi";
             this.GIRISTARIHI.DisplayFormat.FormatString = "f";
             this.GIRISTARIHI.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.GIRISTARIHI.FieldName = "GIRISTARIHI";
@@ -386,6 +390,7 @@
             this.KONTAK.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.KONTAK.AppearanceHeader.Options.UseTextOptions = true;
             this.KONTAK.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.KONTAK.Caption = "Kontak Var Mı ?";
             this.KONTAK.FieldName = "KONTAK";
             this.KONTAK.Name = "KONTAK";
             this.KONTAK.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;

@@ -48,7 +48,7 @@ namespace BusinessLayer
                     abone.BitisTarihi = Convert.ToDateTime(dr["BITISTARIHI"].ToString());
                     abone.AracTipAdi = dr["ARACTIPADI"].ToString();
                     abone.Fiyat = Convert.ToDecimal(dr["FIYAT"].ToString());
-                    abone.AbonelikAdi= dr["ABONELIKADI"].ToString();
+                    abone.AbonelikAdi = dr["ABONELIKADI"].ToString();
 
                 }
             }
@@ -70,7 +70,7 @@ namespace BusinessLayer
                 foreach (DataRow dr in dt.Rows)
                 {
                     aracTip = new EntityLayer.Arac.AracTip();
-                    aracTip.Id= Convert.ToInt32(dr["ID"].ToString());
+                    aracTip.Id = Convert.ToInt32(dr["ID"].ToString());
                     aracTip.Adi = dr["ARACTIPADI"].ToString();
                     aracTip.Fiyat = Convert.ToDecimal(dr["FIYAT"].ToString());
                     aracTips.Add(aracTip);
@@ -79,14 +79,60 @@ namespace BusinessLayer
             }
             catch (Exception)
             {
-                
+
             }
             return aracTips;
         }
+        public bool AracTipEkle(EntityLayer.Arac.AracTip aracTip)
+        {
+            try
+            {
+                _arac.AracTipEkle(aracTip);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+
+            }
+        }
+        public bool AracTipGuncelle(EntityLayer.Arac.AracTip aracTip)
+        {
+            try
+            {
+                _arac.AracTipGuncelle(aracTip);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public bool AracTipSil(int Id)
+        {
+            try
+            {
+                _arac.AracTipSil(Id);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
         public int AracTipIdGetir(string AracTipAdi)
         {
-            return _arac.AracTipIdGetir(AracTipAdi);
+            try
+            {
+                return _arac.AracTipIdGetir(AracTipAdi);
+
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
         }
-       
+
     }
 }

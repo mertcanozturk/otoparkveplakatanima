@@ -40,17 +40,7 @@ namespace DataAccessLayer
                 return dt;
             return dt;
         }
-        public bool AracEkle(EntityLayer.Arac.AboneBilgileri abone,EntityLayer.Arac.AboneTip aboneTip,EntityLayer.Arac.AracTip aracTip,EntityLayer.Arac arac)
-        {
-            string query = "INSERT INTO TBLARACLAR (PLAKA,ARACTIPNO,ABONENO,GIRISTARIHI,KONTAK) VALUES (@PLAKA,@ARACTIPNO,@ABONENO,@GIRISTARIHI,@KONTAK)";
-            SqlParameter[] parameter = new SqlParameter[5];
-            parameter[0] = new SqlParameter("@PLAKA", SqlDbType.VarChar);
-            parameter[0].Value = 
 
-            baglanti.executeInsertQuery(query, parameter);
-
-            return true;
-        }
         public DataTable AracTipGetir(int Id)
         {
             string sorgu = string.Format("SELECT * FROM TBLARACTIP where ID=@ID");
@@ -61,6 +51,40 @@ namespace DataAccessLayer
             if (dt.Rows.Count > 0)
                 return dt;
             return null;
+        }
+        public bool AracTipEkle(EntityLayer.Arac.AracTip aracTip)
+        {
+            string query = "INSERT INTO TBLARACTIP (ARACTIPADI,FIYAT) VALUES (@ARACTIPADI,@FIYAT)";
+            SqlParameter[] parameter = new SqlParameter[2];
+            parameter[0] = new SqlParameter("@ARACTIPADI", SqlDbType.VarChar);
+            parameter[0].Value = aracTip.Adi;
+            parameter[1] = new SqlParameter("@FIYAT", SqlDbType.Decimal);
+            parameter[1].Value = aracTip.Fiyat;
+            baglanti.executeInsertQuery(query, parameter);
+            return true;
+        }
+
+        public bool AracTipGuncelle(EntityLayer.Arac.AracTip aracTip)
+        {
+            string query = "UPDATE TBLARACTIP SET ARACTIPADI=@ARACTIPADI, FIYAT=@FIYAT WHERE ID=@ID";
+            SqlParameter[] parameter = new SqlParameter[3];
+            parameter[0] = new SqlParameter("@ARACTIPADI", SqlDbType.VarChar);
+            parameter[0].Value = aracTip.Adi;
+            parameter[1] = new SqlParameter("@FIYAT", SqlDbType.Decimal);
+            parameter[1].Value = aracTip.Fiyat;
+            parameter[2] = new SqlParameter("@ID", SqlDbType.Int);
+            parameter[2].Value = aracTip.Id;
+            baglanti.executeInsertQuery(query, parameter);
+            return true;
+        }
+        public bool AracTipSil(int Id)
+        {
+            string query = "DELETE FROM TBLARACTIP WHERE ID=@ID";
+            SqlParameter[] parameter = new SqlParameter[1];
+            parameter[0] = new SqlParameter("@ID", SqlDbType.Int);
+            parameter[0].Value = Id;
+            baglanti.executeInsertQuery(query, parameter);
+            return true;
         }
         public int AracTipIdGetir(string AracTipAdi)
         {
@@ -76,7 +100,7 @@ namespace DataAccessLayer
         public DataTable AracTipGetir()
         {
             string sorgu = string.Format("SELECT * FROM TBLARACTIP");
-            DataTable dt = baglanti.executeSelectQuery(sorgu,null);
+            DataTable dt = baglanti.executeSelectQuery(sorgu, null);
             if (dt.Rows.Count > 0)
                 return dt;
             return null;
@@ -94,4 +118,5 @@ namespace DataAccessLayer
             return null;
         }
     }
+
 }

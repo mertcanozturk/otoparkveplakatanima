@@ -13,10 +13,7 @@ namespace Otopark.Classlar
         public decimal UcretHesapla(int AracTipNo,DateTime GirisZamani)
         {
             TimeSpan fark = DateTime.Now - GirisZamani;
-            
-            int dakika = fark.Minutes;
-            int ek = dakika > 10 ? 1 : 0;
-            int saat = fark.Hours + ek;
+            int saat = Convert.ToInt32(fark.TotalHours);
             aracTips = arac.AracTipGetir();
             foreach (var item in aracTips)
             {

@@ -18,11 +18,52 @@ namespace DataAccessLayer
             baglanti = new dbConnection();
         }
 
+
+        public bool AboneTipGuncelle(EntityLayer.AboneTip aboneTip)
+        {
+            string query = string.Format("UPDATE TBLABONELIKTIPI SET ABONELIKADI=@ABONELIKADI, SURE=@SURE, FIYAT=@FIYAT WHERE ID=@ID");
+            SqlParameter[] parameter = new SqlParameter[4];
+            parameter[0] = new SqlParameter("@ABONELIKADI", SqlDbType.VarChar);
+            parameter[0].Value = aboneTip.Adi;
+            parameter[1] = new SqlParameter("@SURE", SqlDbType.Int);
+            parameter[1].Value = aboneTip.Sure;
+            parameter[2] = new SqlParameter("@FIYAT", SqlDbType.Decimal);
+            parameter[2].Value = aboneTip.Ucret;
+            parameter[3] = new SqlParameter("@ID", SqlDbType.Int);
+            parameter[3].Value = aboneTip.Id;
+            baglanti.executeInsertQuery(query, parameter);
+            return true;
+        }
+        public bool AboneTipSil(int Id)
+        {
+            string query = string.Format("DELETE FROM TBLABONELIKTIPI WHERE ID=@ID");
+            SqlParameter[] parameter = new SqlParameter[1];
+            parameter[0] = new SqlParameter("@ID", SqlDbType.Int);
+            parameter[0].Value = Id;
+            baglanti.executeInsertQuery(query, parameter);
+            return true;
+        }
+
+        public bool AboneTipEkle(EntityLayer.AboneTip aboneTip)
+        {
+            string query = string.Format("INSERT INTO TBLABONELIKTIPI (ABONELIKADI,SURE,FIYAT) VALUES (@ABONELIKADI,@SURE,@FIYAT)");
+            SqlParameter[] parameter = new SqlParameter[3];
+            parameter[0] = new SqlParameter("@ABONELIKADI", SqlDbType.VarChar);
+            parameter[0].Value = aboneTip.Adi;
+            parameter[1] = new SqlParameter("@SURE", SqlDbType.Int);
+            parameter[1].Value = aboneTip.Sure;
+            parameter[2] = new SqlParameter("@FIYAT", SqlDbType.Decimal);
+            parameter[2].Value = aboneTip.Ucret;
+            baglanti.executeInsertQuery(query, parameter);
+            return true;
+        }
+
+
         public bool AboneEkle(EntityLayer.Abone abone)
         {
             try
             {
-                string query = "INSERT INTO TBLABONE (ADI,SOYADI,ADRES,TELEFON,PLAKA,ARACTIPNO,GIRISTARIH,BITISTARIHI,ABONELIKTIPINO,KULLANICIID) VALUES(@ADI,@SOYADI,@ADRES,@TELEFON,@PLAKA,@ARACTIPNO,@GIRISTARIH,@BITISTARIHI,@ABONELIKTIPINO,@KULLANICIID)";
+                string query = string.Format("INSERT INTO TBLABONE (ADI,SOYADI,ADRES,TELEFON,PLAKA,ARACTIPNO,GIRISTARIH,BITISTARIHI,ABONELIKTIPINO,KULLANICIID) VALUES(@ADI,@SOYADI,@ADRES,@TELEFON,@PLAKA,@ARACTIPNO,@GIRISTARIH,@BITISTARIHI,@ABONELIKTIPINO,@KULLANICIID)");
                 SqlParameter[] parameter = new SqlParameter[10];
                 parameter[0] = new SqlParameter("@ADI", SqlDbType.VarChar);
                 parameter[0].Value = abone.Adi;
@@ -83,6 +124,7 @@ namespace DataAccessLayer
             }
             return aboneTips;
         }
+
         public int AbonelikTipiIdGetir(string aboneTipAdi)
         {
             string sorgu = string.Format("SELECT * FROM TBLABONELIKTIPI WHERE ABONELIKADI=@ABONELIKADI");

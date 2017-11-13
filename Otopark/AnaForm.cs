@@ -21,14 +21,23 @@ namespace Otopark
 
         private void AnaForm_Load(object sender, EventArgs e)
         {
-            serialPort1.Open();
+            try
+            {
+                serialPort1.Open();
+                timer2.Start();
+                timer3.Start();
+            }
+            catch (Exception)
+            {
+                bildirim.Uyari(serialPort1.PortName + " bulunamadı", "Uyarı");
+            }
+
             GenelForm frm = new GenelForm();
             frm.MdiParent = this;
             frm.Show();
             timer1.Interval = 1000;
             timer1.Start();
-            timer2.Start();
-            timer3.Start();
+
             barTarih.Caption = "Tarih: " + DateTime.Now;
         }
         ~AnaForm()
@@ -50,7 +59,7 @@ namespace Otopark
         private void timer1_Tick(object sender, EventArgs e)
         {
             barTarih.Caption = "Tarih: " + DateTime.Now;
-          
+
 
         }
 
@@ -113,16 +122,16 @@ namespace Otopark
             {
                 int aracMesafesi = int.Parse(serialPort1.ReadLine());
                 Console.WriteLine(aracMesafesi);
-              
-                if (aracMesafesi < 40 && aracMesafesi!=0 && oncekiMesafe >= 40)
-                {   
+
+                if (aracMesafesi < 40 && aracMesafesi != 0 && oncekiMesafe >= 40)
+                {
                     timer2.Stop();
                     if (Application.OpenForms["AracGirisForm"] == null)
                     {
                         AracGirisForm f = new AracGirisForm();
                         f.MdiParent = this;
                         f.Show();
-                        
+
                     }
                 }
                 oncekiMesafe = aracMesafesi;
@@ -139,6 +148,18 @@ namespace Otopark
             {
                 timer2.Start();
             }
+        }
+
+        private void btnAracTipleri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AracTipleriForm frm = new AracTipleriForm();
+            frm.ShowDialog();
+        }
+
+        private void btnAbonelikTipleri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AbonelikTipleriForm frm = new AbonelikTipleriForm();
+            frm.ShowDialog();
         }
     }
 }

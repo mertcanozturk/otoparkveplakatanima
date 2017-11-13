@@ -70,7 +70,31 @@ namespace BusinessLayer
                 return false;
             }
         }
-
+        public bool AboneTipSil(int Id)
+        {
+            if (aboneControl.AboneTipSil(Id))
+                return true;
+            else
+                return false;
+        }
+        public bool AboneTipGuncelle(EntityLayer.AboneTip aboneTip)
+        {
+            if (aboneControl.AboneTipGuncelle(aboneTip))
+                return true;
+            else
+                return false;
+        }
+        public bool AboneTipKaydet(EntityLayer.AboneTip aboneTip)
+        {
+            if (aboneControl.AboneTipEkle(aboneTip))
+                return true;
+            else
+                return false;
+        }
+        public List<EntityLayer.AboneTip> AboneTipListesiGetir()
+        {
+            return aboneControl.AboneTipListesiGetir();
+        }
         public int AbonelikTipiIdGetir(string AbonelikAdi)
         {
             return aboneControl.AbonelikTipiIdGetir(AbonelikAdi);

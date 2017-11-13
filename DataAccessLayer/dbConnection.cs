@@ -60,6 +60,8 @@ namespace DataAccessLayer
             return dataTable;
         }
 
+        
+
         public DataTable Listele()
         {
             DataTable tablo = new DataTable();
