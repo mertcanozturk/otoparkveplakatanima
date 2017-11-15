@@ -34,6 +34,11 @@ namespace Otopark
             lblAnlikOtobüsSayisi.Text = Bsotopark.anlikOtobusSayisi().ToString();
             lblAnlikOtomobilSayisi.Text = Bsotopark.anlikOtomobilSayisi().ToString();
             lblAnlikTirSayisi.Text = Bsotopark.anlikTirSayisi().ToString();
+            lblGunlukKamyonSayisi.Text = Bsotopark.GunlukCikanKamyonSayisi().ToString();
+            lblGunlukOtobusSayisi.Text= Bsotopark.GunlukCikanOtobusSayisi().ToString();
+            lblGunlukOtomobilSayisi.Text= Bsotopark.GunlukCikanOtomobilSayisi().ToString();
+            lblGunlukTirSayisi.Text= Bsotopark.GunlukCikanTirSayisi().ToString();
+            lblMinibusSayisi.Text= Bsotopark.GunlukCikanMinibusSayisi().ToString();
         }
         private void GenelForm_Load(object sender, EventArgs e)
         {

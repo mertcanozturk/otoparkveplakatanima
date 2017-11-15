@@ -37,5 +37,10 @@ namespace Otopark
         {
 
         }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

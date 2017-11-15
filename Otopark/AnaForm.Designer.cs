@@ -175,6 +175,7 @@
             this.btnKasaDurumu.Id = 18;
             this.btnKasaDurumu.ImageOptions.LargeImage = global::Otopark.Properties.Resources.Safe_Box_32;
             this.btnKasaDurumu.Name = "btnKasaDurumu";
+            this.btnKasaDurumu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKasaDurumu_ItemClick);
             // 
             // btnParaGirisi
             // 
@@ -182,6 +183,7 @@
             this.btnParaGirisi.Id = 21;
             this.btnParaGirisi.ImageOptions.LargeImage = global::Otopark.Properties.Resources.para_ekle;
             this.btnParaGirisi.Name = "btnParaGirisi";
+            this.btnParaGirisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnParaGirisi_ItemClick);
             // 
             // btnParaCikisi
             // 
@@ -189,6 +191,7 @@
             this.btnParaCikisi.Id = 22;
             this.btnParaCikisi.ImageOptions.LargeImage = global::Otopark.Properties.Resources.para_cikar;
             this.btnParaCikisi.Name = "btnParaCikisi";
+            this.btnParaCikisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnParaCikisi_ItemClick);
             // 
             // ribbonPageGroup3
             // 
@@ -352,8 +355,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 503);
             this.Controls.Add(this.ribbonControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
             this.Name = "AnaForm";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

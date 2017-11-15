@@ -56,6 +56,11 @@ namespace DataAccessLayer
                 return dt;
             return null;
         }
+
+       // SELECT* FROM kayitlar WHERE DATE(tarih) = CURDATE()
+
+        
+
         public DataTable belliSayidaAracListele(int AracSayisi)
         {
             string query = "SELECT TOP 20 * FROM VARACLAR";
@@ -66,6 +71,76 @@ namespace DataAccessLayer
                 return dt;
             return null;
         }
+
+
+        // GUNLUK ÇIKAN ARAÇ SAYILARI AŞAĞIDA
+        public int GünlükCikanOtomobilSayisi()
+        {
+            string query = "SELECT * FROM TBLSATISLAR WHERE CIKISTARIHI>= Convert(datetime,@bugun, 104) AND ARACTIPNO='1'";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@bugun", SqlDbType.NVarChar);
+            sqlParameters[0].Value = DateTime.Today.ToShortDateString();
+            DataTable dt = baglanti.executeSelectQuery(query, sqlParameters);
+            if (dt.Rows.Count > 0)
+                return dt.Rows.Count;
+            return 0;
+
+        }
+        public int GünlükCikanMinibusSayisi()
+        {
+            string query = "SELECT * FROM TBLSATISLAR WHERE CIKISTARIHI>= Convert(datetime,@bugun, 104) AND ARACTIPNO=2";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@bugun", SqlDbType.NVarChar);
+            sqlParameters[0].Value = DateTime.Today.ToShortDateString();
+            DataTable dt = baglanti.executeSelectQuery(query, sqlParameters);
+            if (dt.Rows.Count > 0)
+                return dt.Rows.Count;
+            return 0;
+
+        }
+
+        public int GünlükCikanKamyonSayisi()
+        {
+            string query = "SELECT * FROM TBLSATISLAR WHERE CIKISTARIHI>= Convert(datetime,@bugun, 104) AND ARACTIPNO=3";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@bugun", SqlDbType.NVarChar);
+            sqlParameters[0].Value = DateTime.Today.ToShortDateString();
+            DataTable dt = baglanti.executeSelectQuery(query, sqlParameters);
+            if (dt.Rows.Count > 0)
+                return dt.Rows.Count;
+            return 0;
+
+        }
+
+
+        public int GünlükCikanTirSayisi()
+        {
+            string query = "SELECT * FROM TBLSATISLAR WHERE CIKISTARIHI>= Convert(datetime,@bugun, 104) AND ARACTIPNO=5";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@bugun", SqlDbType.NVarChar);
+            sqlParameters[0].Value = DateTime.Today.ToShortDateString();
+            DataTable dt = baglanti.executeSelectQuery(query, sqlParameters);
+            if (dt.Rows.Count > 0)
+                return dt.Rows.Count;
+            return 0;
+
+        }
+
+        public int GünlükCikanOtobusSayisi()
+        {
+            string query = "SELECT * FROM TBLSATISLAR WHERE CIKISTARIHI>= Convert(datetime,@bugun, 104) AND ARACTIPNO=4";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@bugun", SqlDbType.NVarChar);
+            sqlParameters[0].Value = DateTime.Today.ToShortDateString();
+            DataTable dt = baglanti.executeSelectQuery(query, sqlParameters);
+            if (dt.Rows.Count > 0)
+                return dt.Rows.Count;
+            return 0;
+
+        }
+
+
+        // ANLIK ARAÇ SAYILARI AŞAĞIDA
 
         public int OtomobilSayisi()
         {

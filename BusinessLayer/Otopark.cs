@@ -127,6 +127,29 @@ namespace BusinessLayer
             return otopark.KamyonSayisi();
         }
 
+        public int GunlukCikanOtomobilSayisi()
+        {
+            return otopark.GünlükCikanOtomobilSayisi();
+        }
+        public int GunlukCikanTirSayisi()
+        {
+            return otopark.GünlükCikanTirSayisi();
+        }
+        public int GunlukCikanOtobusSayisi()
+        {
+            return otopark.GünlükCikanOtobusSayisi();
+
+        }
+        public int GunlukCikanMinibusSayisi()
+        {
+            return otopark.GünlükCikanMinibusSayisi();
+        }
+        public int GunlukCikanKamyonSayisi()
+        {
+            return otopark.GünlükCikanKamyonSayisi();
+        }
+
+
         public DataRow AracGetir(string plaka)
         {
             DataRow row;

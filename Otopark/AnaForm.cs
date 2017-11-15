@@ -12,6 +12,7 @@ namespace Otopark
     public partial class AnaForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         Classlar.Bildirim bildirim = new Classlar.Bildirim();
+        bool GuvenliCikis = false;
         public AnaForm()
         {
             InitializeComponent();
@@ -95,15 +96,27 @@ namespace Otopark
 
         private void btnCikis_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            GuvenliCikis = true;
             Application.Exit();
         }
 
         private void AnaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!bildirim.Soru("Çıkmak istiyor musunuz?", "Soru"))
+            if (GuvenliCikis)
+            {
+                if (!bildirim.Soru("Çıkmak istiyor musunuz?", "Soru"))
+                {
+                    Application.Exit();
+                }
+                else
+                    GuvenliCikis = false;
+            }
+            else
             {
                 e.Cancel = true;
+                bildirim.Uyari("Lütfen güvenli çıkışı kullanın.", "Uyarı");
             }
+
         }
 
         private void btnOtopark_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -159,6 +172,29 @@ namespace Otopark
         private void btnAbonelikTipleri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             AbonelikTipleriForm frm = new AbonelikTipleriForm();
+            frm.ShowDialog();
+        }
+
+        private void btnKasaDurumu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Application.OpenForms["KasaDurumuForm"] == null)
+            {
+                KasaDurumuForm frm = new KasaDurumuForm();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+
+        }
+
+        private void btnParaGirisi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            KasaGirisForm frm = new KasaGirisForm();
+            frm.ShowDialog();
+        }
+
+        private void btnParaCikisi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            KasaCikisForm frm = new KasaCikisForm();
             frm.ShowDialog();
         }
     }

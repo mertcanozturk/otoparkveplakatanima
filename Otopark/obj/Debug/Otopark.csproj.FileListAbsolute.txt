@@ -421,3 +421,6 @@ C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\bin\Debug\ru\DevExpress.Xtr
 C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\obj\Debug\Otopark.GenelForm.resources
 C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\obj\Debug\Otopark.AbonelikTipleriForm.resources
 C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\obj\Debug\Otopark.AracTipleriForm.resources
+C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\obj\Debug\Otopark.KasaDurumuForm.resources
+C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\obj\Debug\Otopark.KasaCikisForm.resources
+C:\Users\Mert\Documents\otoparkveplakatanima\Otopark\obj\Debug\Otopark.KasaGirisForm.resources

@@ -107,6 +107,7 @@
             this.btnCikis.Size = new System.Drawing.Size(72, 23);
             this.btnCikis.TabIndex = 3;
             this.btnCikis.Text = "Çıkış";
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // lblHata
             // 

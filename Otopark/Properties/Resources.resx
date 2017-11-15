@@ -124,6 +124,9 @@
   <data name="no-cam1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\no-cam.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="static1.squarespace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\static1.squarespace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="no1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\no1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,7 +187,7 @@
   <data name="subscriber-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\subscriber-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="static1.squarespace" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\static1.squarespace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cashicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cashicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

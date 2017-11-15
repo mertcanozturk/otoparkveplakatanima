@@ -93,6 +93,16 @@ namespace Otopark.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cashicon {
+            get {
+                object obj = ResourceManager.GetObject("cashicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap daily_report_32 {
             get {
                 object obj = ResourceManager.GetObject("daily-report-32", resourceCulture);
